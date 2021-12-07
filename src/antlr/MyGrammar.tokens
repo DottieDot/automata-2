@@ -1,0 +1,14 @@
+INTEGER=1
+OP_PLUS=2
+OP_MINUS=3
+OP_MULT=4
+OP_DIV=5
+LPAR=6
+RPAR=7
+WHITESPACE=8
+'+'=2
+'-'=3
+'*'=4
+'/'=5
+'('=6
+')'=7
