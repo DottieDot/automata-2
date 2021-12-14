@@ -35,6 +35,15 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MyGrammarParser#ifStatement.
+    def enterIfStatement(self, ctx:MyGrammarParser.IfStatementContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#ifStatement.
+    def exitIfStatement(self, ctx:MyGrammarParser.IfStatementContext):
+        pass
+
+
     # Enter a parse tree produced by MyGrammarParser#defineVariable.
     def enterDefineVariable(self, ctx:MyGrammarParser.DefineVariableContext):
         pass
@@ -62,12 +71,39 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MyGrammarParser#not.
+    def enterNot(self, ctx:MyGrammarParser.NotContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#not.
+    def exitNot(self, ctx:MyGrammarParser.NotContext):
+        pass
+
+
     # Enter a parse tree produced by MyGrammarParser#infixExpr.
     def enterInfixExpr(self, ctx:MyGrammarParser.InfixExprContext):
         pass
 
     # Exit a parse tree produced by MyGrammarParser#infixExpr.
     def exitInfixExpr(self, ctx:MyGrammarParser.InfixExprContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#comparison.
+    def enterComparison(self, ctx:MyGrammarParser.ComparisonContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#comparison.
+    def exitComparison(self, ctx:MyGrammarParser.ComparisonContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#conjunction.
+    def enterConjunction(self, ctx:MyGrammarParser.ConjunctionContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#conjunction.
+    def exitConjunction(self, ctx:MyGrammarParser.ConjunctionContext):
         pass
 
 

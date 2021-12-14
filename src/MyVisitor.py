@@ -1,11 +1,6 @@
 from antlr.MyGrammarParser import MyGrammarParser
 from antlr.MyGrammarVisitor import MyGrammarVisitor
-from lang import AddExprNode, SubtractExprNode, MultiplyExprNode, DivideExprNode, NumberExprNode, ScopeNode
-from lang.VariableAssignmentNode import VariableAssignmentNode
-from lang.VariableDefinitionNode import VariableDefinitionNode
-from lang.expr.ExprNode import ExprNode
-from lang.expr.FunctionCallNode import FunctionCallNode
-from lang.expr.ReadVariableExprNode import ReadVariableExprNode
+from lang import *
 
 class MyVisitor(MyGrammarVisitor):
   def __init__(self) -> None:
@@ -45,6 +40,61 @@ class MyVisitor(MyGrammarVisitor):
 
   def visitExpression(self, ctx: MyGrammarParser.ExpressionContext):
     return self.visit(ctx.expr())
+
+  def visitIfStatement(self, ctx: MyGrammarParser.IfStatementContext):
+    return IfNode(
+      self.visit(ctx.expr()),
+      self.visit(ctx.statement())
+    )
+
+  def visitNot(self, ctx: MyGrammarParser.NotContext):
+    return NotExprNode(
+      self.visit(ctx.expr())
+    )
+
+  def visitComparison(self, ctx: MyGrammarParser.ComparisonContext):
+    if ctx.GT():
+      return GtExprNode(
+        self.visit(ctx.left),
+        self.visit(ctx.right)
+      )
+    elif ctx.GE():
+      return GeExprNode(
+        self.visit(ctx.left),
+        self.visit(ctx.right)
+      )
+    elif ctx.LT():
+      return LtExprNode(
+        self.visit(ctx.left),
+        self.visit(ctx.right)
+      )
+    elif ctx.LE():
+      return LeExprNode(
+        self.visit(ctx.left),
+        self.visit(ctx.right)
+      )
+    elif ctx.EQ():
+      return EqExprNode(
+        self.visit(ctx.left),
+        self.visit(ctx.right)
+      )
+    elif ctx.NEQ():
+      return NeqExprNode(
+        self.visit(ctx.left),
+        self.visit(ctx.right)
+      )
+    
+  def visitConjunction(self, ctx: MyGrammarParser.ConjunctionContext):
+    if ctx.AND():
+      return AndExprNode(
+        self.visit(ctx.left),
+        self.visit(ctx.right)
+      )
+    elif ctx.OR:
+      return OrExprNode(
+        self.visit(ctx.left),
+        self.visit(ctx.right)
+      )
 
   def visitInfixExpr(self, ctx: MyGrammarParser.InfixExprContext):
     if ctx.OP_PLUS():

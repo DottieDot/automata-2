@@ -24,6 +24,11 @@ class MyGrammarVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MyGrammarParser#ifStatement.
+    def visitIfStatement(self, ctx:MyGrammarParser.IfStatementContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MyGrammarParser#defineVariable.
     def visitDefineVariable(self, ctx:MyGrammarParser.DefineVariableContext):
         return self.visitChildren(ctx)
@@ -39,8 +44,23 @@ class MyGrammarVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MyGrammarParser#not.
+    def visitNot(self, ctx:MyGrammarParser.NotContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MyGrammarParser#infixExpr.
     def visitInfixExpr(self, ctx:MyGrammarParser.InfixExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#comparison.
+    def visitComparison(self, ctx:MyGrammarParser.ComparisonContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#conjunction.
+    def visitConjunction(self, ctx:MyGrammarParser.ConjunctionContext):
         return self.visitChildren(ctx)
 
 
