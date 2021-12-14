@@ -14,13 +14,48 @@ class MyGrammarVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MyGrammarParser#scope.
+    def visitScope(self, ctx:MyGrammarParser.ScopeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#newScope.
+    def visitNewScope(self, ctx:MyGrammarParser.NewScopeContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#defineVariable.
+    def visitDefineVariable(self, ctx:MyGrammarParser.DefineVariableContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#assignVariable.
+    def visitAssignVariable(self, ctx:MyGrammarParser.AssignVariableContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#expression.
+    def visitExpression(self, ctx:MyGrammarParser.ExpressionContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MyGrammarParser#infixExpr.
     def visitInfixExpr(self, ctx:MyGrammarParser.InfixExprContext):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MyGrammarParser#readVariable.
+    def visitReadVariable(self, ctx:MyGrammarParser.ReadVariableContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MyGrammarParser#numberExpr.
     def visitNumberExpr(self, ctx:MyGrammarParser.NumberExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#functionCall.
+    def visitFunctionCall(self, ctx:MyGrammarParser.FunctionCallContext):
         return self.visitChildren(ctx)
 
 

@@ -2,6 +2,7 @@ from antlr4 import CommonTokenStream, InputStream
 from antlr.MyGrammarLexer import MyGrammarLexer
 from antlr.MyGrammarParser import MyGrammarParser
 from MyVisitor import MyVisitor
+from lang.Node import Node
 
 def main():
   while True:
@@ -13,9 +14,8 @@ def main():
     tree = parser.compileUnit()
 
     visitor = MyVisitor()
-    program = visitor.visitCompileUnit(tree)
+    program: Node = visitor.visitCompileUnit(tree)
 
-    value = program.get_value()
-    print(f'= {value}')
+    program.execute()
 
 main()

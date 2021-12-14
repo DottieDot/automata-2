@@ -1,4 +1,4 @@
-from lang.ExprNode import ExprNode
+from .ExprNode import ExprNode
 from .InfixExprNode import InfixExprNode
 
 class MultiplyExprNode(InfixExprNode):
