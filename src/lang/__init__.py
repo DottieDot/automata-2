@@ -6,4 +6,3 @@ from .VariableAssignmentNode import *
 from .VariableDefinitionNode import *
 from .IfNode                 import *
 from .WhileNode              import *
-from .ForNode                import *
