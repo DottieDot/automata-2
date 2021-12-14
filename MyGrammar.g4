@@ -9,11 +9,12 @@ scope
   ;
 
 statement
-  : OPEN_BLOCK scope CLOSE_BLOCK       # newScope
-  | IF LPAR expr RPAR statement        # ifStatement
-  | LET IDENTIFIER OP_ASSIGN expr EOS  # defineVariable
-  | IDENTIFIER OP_ASSIGN expr EOS      # assignVariable
-  | expr EOS                           # expression
+  : OPEN_BLOCK scope CLOSE_BLOCK                         # newScope
+  | IF LPAR expr RPAR statement                          # ifStatement
+  | WHILE LPAR expr RPAR statement                       # whileStatement
+  | LET IDENTIFIER OP_ASSIGN expr EOS                    # defineVariable
+  | IDENTIFIER OP_ASSIGN expr EOS                        # assignVariable
+  | expr EOS                                             # expression
   ;
 
 expr
@@ -51,8 +52,10 @@ OPEN_BLOCK : '{';
 CLOSE_BLOCK: '}';
 COMMA      : ',';
 
-LET: 'let';
-IF: 'if';
+LET  : 'let';
+IF   : 'if';
+WHILE: 'while';
+FOR  : 'for';
 
 INTEGER: [0-9]+;
 IDENTIFIER: [A-Za-z_][A-Za-z0-9]*;

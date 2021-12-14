@@ -47,6 +47,12 @@ class MyVisitor(MyGrammarVisitor):
       self.visit(ctx.statement())
     )
 
+  def visitWhileStatement(self, ctx: MyGrammarParser.WhileStatementContext):
+    return WhileNode(
+      self.visit(ctx.expr()),
+      self.visit(ctx.statement())
+    )
+
   def visitNot(self, ctx: MyGrammarParser.NotContext):
     return NotExprNode(
       self.visit(ctx.expr())

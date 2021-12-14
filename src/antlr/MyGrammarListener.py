@@ -44,6 +44,15 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MyGrammarParser#whileStatement.
+    def enterWhileStatement(self, ctx:MyGrammarParser.WhileStatementContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#whileStatement.
+    def exitWhileStatement(self, ctx:MyGrammarParser.WhileStatementContext):
+        pass
+
+
     # Enter a parse tree produced by MyGrammarParser#defineVariable.
     def enterDefineVariable(self, ctx:MyGrammarParser.DefineVariableContext):
         pass
