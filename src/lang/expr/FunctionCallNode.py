@@ -1,8 +1,9 @@
+from lang.Variable import Variable
 from .ExprNode import ExprNode
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-  from ..ScopeNode import ScopeNode
+  from .ScopeNode import ScopeNode
 
 class FunctionCallNode(ExprNode):
   params: list[ExprNode]
@@ -11,7 +12,7 @@ class FunctionCallNode(ExprNode):
     super().__init__()
     self.params = params
 
-  def get_value(self) -> int:
+  def get_value(self) -> Variable:
     for param in self.params:
       print(param.get_value())
     return 0

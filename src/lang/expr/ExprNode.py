@@ -1,11 +1,15 @@
-from ..Node import Node
+from typing import TYPE_CHECKING
+from ..Variable import Variable
 
-class ExprNode(Node):
+if TYPE_CHECKING:
+  from .ScopeNode import ScopeNode
+
+class ExprNode:
   def __init__(self) -> None:
     super().__init__()
 
-  def get_value(self) -> int:
-    pass
+  def set_scope(self, scope: 'ScopeNode') -> None:
+    self.scope = scope
 
-  def execute(self):
-    self.get_value()
+  def get_value(self) -> Variable:
+    pass

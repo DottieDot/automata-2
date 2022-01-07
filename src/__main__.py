@@ -2,7 +2,7 @@ from antlr4 import CommonTokenStream, InputStream
 from antlr.MyGrammarLexer import MyGrammarLexer
 from antlr.MyGrammarParser import MyGrammarParser
 from MyVisitor import MyVisitor
-from lang.Node import Node
+from lang import ExprNode
 
 def main():
   while True:
@@ -11,11 +11,11 @@ def main():
     lexer = MyGrammarLexer(text)
     stream = CommonTokenStream(lexer)
     parser = MyGrammarParser(stream)
-    tree = parser.compileUnit()
+    tree = parser.compile_unit()
 
     visitor = MyVisitor()
-    program: Node = visitor.visitCompileUnit(tree)
+    program: ExprNode = visitor.visitCompile_unit(tree)
 
-    program.execute()
+    print(program.get_value().value)
 
 main()

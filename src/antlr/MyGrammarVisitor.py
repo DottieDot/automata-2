@@ -9,53 +9,18 @@ else:
 
 class MyGrammarVisitor(ParseTreeVisitor):
 
-    # Visit a parse tree produced by MyGrammarParser#compileUnit.
-    def visitCompileUnit(self, ctx:MyGrammarParser.CompileUnitContext):
+    # Visit a parse tree produced by MyGrammarParser#compile_unit.
+    def visitCompile_unit(self, ctx:MyGrammarParser.Compile_unitContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MyGrammarParser#scope.
-    def visitScope(self, ctx:MyGrammarParser.ScopeContext):
+    # Visit a parse tree produced by MyGrammarParser#scoped_expr.
+    def visitScoped_expr(self, ctx:MyGrammarParser.Scoped_exprContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MyGrammarParser#newScope.
-    def visitNewScope(self, ctx:MyGrammarParser.NewScopeContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MyGrammarParser#ifStatement.
-    def visitIfStatement(self, ctx:MyGrammarParser.IfStatementContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MyGrammarParser#whileStatement.
-    def visitWhileStatement(self, ctx:MyGrammarParser.WhileStatementContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MyGrammarParser#defineVariable.
-    def visitDefineVariable(self, ctx:MyGrammarParser.DefineVariableContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MyGrammarParser#assignVariable.
-    def visitAssignVariable(self, ctx:MyGrammarParser.AssignVariableContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MyGrammarParser#expression.
-    def visitExpression(self, ctx:MyGrammarParser.ExpressionContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MyGrammarParser#not.
-    def visitNot(self, ctx:MyGrammarParser.NotContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MyGrammarParser#infixExpr.
-    def visitInfixExpr(self, ctx:MyGrammarParser.InfixExprContext):
+    # Visit a parse tree produced by MyGrammarParser#parentheses.
+    def visitParentheses(self, ctx:MyGrammarParser.ParenthesesContext):
         return self.visitChildren(ctx)
 
 
@@ -64,28 +29,78 @@ class MyGrammarVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MyGrammarParser#function_call.
+    def visitFunction_call(self, ctx:MyGrammarParser.Function_callContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#multiply_divide.
+    def visitMultiply_divide(self, ctx:MyGrammarParser.Multiply_divideContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#bool_literal.
+    def visitBool_literal(self, ctx:MyGrammarParser.Bool_literalContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#define_variable.
+    def visitDefine_variable(self, ctx:MyGrammarParser.Define_variableContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#int_literal.
+    def visitInt_literal(self, ctx:MyGrammarParser.Int_literalContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#function_decl.
+    def visitFunction_decl(self, ctx:MyGrammarParser.Function_declContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#not.
+    def visitNot(self, ctx:MyGrammarParser.NotContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MyGrammarParser#conjunction.
     def visitConjunction(self, ctx:MyGrammarParser.ConjunctionContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MyGrammarParser#readVariable.
-    def visitReadVariable(self, ctx:MyGrammarParser.ReadVariableContext):
+    # Visit a parse tree produced by MyGrammarParser#none_literal.
+    def visitNone_literal(self, ctx:MyGrammarParser.None_literalContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MyGrammarParser#numberExpr.
-    def visitNumberExpr(self, ctx:MyGrammarParser.NumberExprContext):
+    # Visit a parse tree produced by MyGrammarParser#read_variable.
+    def visitRead_variable(self, ctx:MyGrammarParser.Read_variableContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MyGrammarParser#functionCall.
-    def visitFunctionCall(self, ctx:MyGrammarParser.FunctionCallContext):
+    # Visit a parse tree produced by MyGrammarParser#assign_variable.
+    def visitAssign_variable(self, ctx:MyGrammarParser.Assign_variableContext):
         return self.visitChildren(ctx)
 
 
-    # Visit a parse tree produced by MyGrammarParser#parenExpr.
-    def visitParenExpr(self, ctx:MyGrammarParser.ParenExprContext):
+    # Visit a parse tree produced by MyGrammarParser#float_literal.
+    def visitFloat_literal(self, ctx:MyGrammarParser.Float_literalContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#if_statement.
+    def visitIf_statement(self, ctx:MyGrammarParser.If_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#nan_literal.
+    def visitNan_literal(self, ctx:MyGrammarParser.Nan_literalContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#add_subtract.
+    def visitAdd_subtract(self, ctx:MyGrammarParser.Add_subtractContext):
         return self.visitChildren(ctx)
 
 

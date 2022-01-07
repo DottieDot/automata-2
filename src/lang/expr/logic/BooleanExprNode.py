@@ -2,7 +2,7 @@ from ..ExprNode import ExprNode
 from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
-  from lang.ScopeNode import ScopeNode
+  from ..ScopeNode import ScopeNode
 
 class BooleanExprNode(ExprNode):
   left: ExprNode

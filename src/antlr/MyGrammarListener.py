@@ -8,93 +8,30 @@ else:
 # This class defines a complete listener for a parse tree produced by MyGrammarParser.
 class MyGrammarListener(ParseTreeListener):
 
-    # Enter a parse tree produced by MyGrammarParser#compileUnit.
-    def enterCompileUnit(self, ctx:MyGrammarParser.CompileUnitContext):
+    # Enter a parse tree produced by MyGrammarParser#compile_unit.
+    def enterCompile_unit(self, ctx:MyGrammarParser.Compile_unitContext):
         pass
 
-    # Exit a parse tree produced by MyGrammarParser#compileUnit.
-    def exitCompileUnit(self, ctx:MyGrammarParser.CompileUnitContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#scope.
-    def enterScope(self, ctx:MyGrammarParser.ScopeContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#scope.
-    def exitScope(self, ctx:MyGrammarParser.ScopeContext):
+    # Exit a parse tree produced by MyGrammarParser#compile_unit.
+    def exitCompile_unit(self, ctx:MyGrammarParser.Compile_unitContext):
         pass
 
 
-    # Enter a parse tree produced by MyGrammarParser#newScope.
-    def enterNewScope(self, ctx:MyGrammarParser.NewScopeContext):
+    # Enter a parse tree produced by MyGrammarParser#scoped_expr.
+    def enterScoped_expr(self, ctx:MyGrammarParser.Scoped_exprContext):
         pass
 
-    # Exit a parse tree produced by MyGrammarParser#newScope.
-    def exitNewScope(self, ctx:MyGrammarParser.NewScopeContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#ifStatement.
-    def enterIfStatement(self, ctx:MyGrammarParser.IfStatementContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#ifStatement.
-    def exitIfStatement(self, ctx:MyGrammarParser.IfStatementContext):
+    # Exit a parse tree produced by MyGrammarParser#scoped_expr.
+    def exitScoped_expr(self, ctx:MyGrammarParser.Scoped_exprContext):
         pass
 
 
-    # Enter a parse tree produced by MyGrammarParser#whileStatement.
-    def enterWhileStatement(self, ctx:MyGrammarParser.WhileStatementContext):
+    # Enter a parse tree produced by MyGrammarParser#parentheses.
+    def enterParentheses(self, ctx:MyGrammarParser.ParenthesesContext):
         pass
 
-    # Exit a parse tree produced by MyGrammarParser#whileStatement.
-    def exitWhileStatement(self, ctx:MyGrammarParser.WhileStatementContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#defineVariable.
-    def enterDefineVariable(self, ctx:MyGrammarParser.DefineVariableContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#defineVariable.
-    def exitDefineVariable(self, ctx:MyGrammarParser.DefineVariableContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#assignVariable.
-    def enterAssignVariable(self, ctx:MyGrammarParser.AssignVariableContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#assignVariable.
-    def exitAssignVariable(self, ctx:MyGrammarParser.AssignVariableContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#expression.
-    def enterExpression(self, ctx:MyGrammarParser.ExpressionContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#expression.
-    def exitExpression(self, ctx:MyGrammarParser.ExpressionContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#not.
-    def enterNot(self, ctx:MyGrammarParser.NotContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#not.
-    def exitNot(self, ctx:MyGrammarParser.NotContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#infixExpr.
-    def enterInfixExpr(self, ctx:MyGrammarParser.InfixExprContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#infixExpr.
-    def exitInfixExpr(self, ctx:MyGrammarParser.InfixExprContext):
+    # Exit a parse tree produced by MyGrammarParser#parentheses.
+    def exitParentheses(self, ctx:MyGrammarParser.ParenthesesContext):
         pass
 
 
@@ -107,6 +44,69 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MyGrammarParser#function_call.
+    def enterFunction_call(self, ctx:MyGrammarParser.Function_callContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#function_call.
+    def exitFunction_call(self, ctx:MyGrammarParser.Function_callContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#multiply_divide.
+    def enterMultiply_divide(self, ctx:MyGrammarParser.Multiply_divideContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#multiply_divide.
+    def exitMultiply_divide(self, ctx:MyGrammarParser.Multiply_divideContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#bool_literal.
+    def enterBool_literal(self, ctx:MyGrammarParser.Bool_literalContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#bool_literal.
+    def exitBool_literal(self, ctx:MyGrammarParser.Bool_literalContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#define_variable.
+    def enterDefine_variable(self, ctx:MyGrammarParser.Define_variableContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#define_variable.
+    def exitDefine_variable(self, ctx:MyGrammarParser.Define_variableContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#int_literal.
+    def enterInt_literal(self, ctx:MyGrammarParser.Int_literalContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#int_literal.
+    def exitInt_literal(self, ctx:MyGrammarParser.Int_literalContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#function_decl.
+    def enterFunction_decl(self, ctx:MyGrammarParser.Function_declContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#function_decl.
+    def exitFunction_decl(self, ctx:MyGrammarParser.Function_declContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#not.
+    def enterNot(self, ctx:MyGrammarParser.NotContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#not.
+    def exitNot(self, ctx:MyGrammarParser.NotContext):
+        pass
+
+
     # Enter a parse tree produced by MyGrammarParser#conjunction.
     def enterConjunction(self, ctx:MyGrammarParser.ConjunctionContext):
         pass
@@ -116,39 +116,66 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MyGrammarParser#readVariable.
-    def enterReadVariable(self, ctx:MyGrammarParser.ReadVariableContext):
+    # Enter a parse tree produced by MyGrammarParser#none_literal.
+    def enterNone_literal(self, ctx:MyGrammarParser.None_literalContext):
         pass
 
-    # Exit a parse tree produced by MyGrammarParser#readVariable.
-    def exitReadVariable(self, ctx:MyGrammarParser.ReadVariableContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#numberExpr.
-    def enterNumberExpr(self, ctx:MyGrammarParser.NumberExprContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#numberExpr.
-    def exitNumberExpr(self, ctx:MyGrammarParser.NumberExprContext):
+    # Exit a parse tree produced by MyGrammarParser#none_literal.
+    def exitNone_literal(self, ctx:MyGrammarParser.None_literalContext):
         pass
 
 
-    # Enter a parse tree produced by MyGrammarParser#functionCall.
-    def enterFunctionCall(self, ctx:MyGrammarParser.FunctionCallContext):
+    # Enter a parse tree produced by MyGrammarParser#read_variable.
+    def enterRead_variable(self, ctx:MyGrammarParser.Read_variableContext):
         pass
 
-    # Exit a parse tree produced by MyGrammarParser#functionCall.
-    def exitFunctionCall(self, ctx:MyGrammarParser.FunctionCallContext):
+    # Exit a parse tree produced by MyGrammarParser#read_variable.
+    def exitRead_variable(self, ctx:MyGrammarParser.Read_variableContext):
         pass
 
 
-    # Enter a parse tree produced by MyGrammarParser#parenExpr.
-    def enterParenExpr(self, ctx:MyGrammarParser.ParenExprContext):
+    # Enter a parse tree produced by MyGrammarParser#assign_variable.
+    def enterAssign_variable(self, ctx:MyGrammarParser.Assign_variableContext):
         pass
 
-    # Exit a parse tree produced by MyGrammarParser#parenExpr.
-    def exitParenExpr(self, ctx:MyGrammarParser.ParenExprContext):
+    # Exit a parse tree produced by MyGrammarParser#assign_variable.
+    def exitAssign_variable(self, ctx:MyGrammarParser.Assign_variableContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#float_literal.
+    def enterFloat_literal(self, ctx:MyGrammarParser.Float_literalContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#float_literal.
+    def exitFloat_literal(self, ctx:MyGrammarParser.Float_literalContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#if_statement.
+    def enterIf_statement(self, ctx:MyGrammarParser.If_statementContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#if_statement.
+    def exitIf_statement(self, ctx:MyGrammarParser.If_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#nan_literal.
+    def enterNan_literal(self, ctx:MyGrammarParser.Nan_literalContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#nan_literal.
+    def exitNan_literal(self, ctx:MyGrammarParser.Nan_literalContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#add_subtract.
+    def enterAdd_subtract(self, ctx:MyGrammarParser.Add_subtractContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#add_subtract.
+    def exitAdd_subtract(self, ctx:MyGrammarParser.Add_subtractContext):
         pass
 
 
