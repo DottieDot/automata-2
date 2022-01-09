@@ -46,7 +46,7 @@ class ScopeNode(ExprNode):
 
   def assign_variable(self, identifier: str, value: Variable):
     if identifier in self._variables():
-      self.variables[identifier] = value
+      self._variables()[identifier] = value
     elif self.scope:
       self.scope.assign_variable(identifier, value)
     else:

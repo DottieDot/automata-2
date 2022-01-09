@@ -215,6 +215,15 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MyGrammarParser#while_statement.
+    def enterWhile_statement(self, ctx:MyGrammarParser.While_statementContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#while_statement.
+    def exitWhile_statement(self, ctx:MyGrammarParser.While_statementContext):
+        pass
+
+
     # Enter a parse tree produced by MyGrammarParser#add_subtract.
     def enterAdd_subtract(self, ctx:MyGrammarParser.Add_subtractContext):
         pass

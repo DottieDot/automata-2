@@ -17,20 +17,20 @@ expr
   | (TRUE|FALSE)                                    # bool_literal
   | NONE                                            # none_literal
   | NAN                                             # nan_literal
-  | FUNCTION ident=IDENTIFIER? LPAR (IDENTIFIER(COMMA IDENTIFIER)*)? RPAR OPEN_BLOCK scoped_expr CLOSE_BLOCK # function_decl
-  | ident=IDENTIFIER LPAR (expr(COMMA expr)*)? RPAR # function_call
-  | fn_expr=expr LPAR (expr(COMMA expr)*)? RPAR     # anonymous_function_call
-  | if_statement (else_if_statement)* (else_statement)?  # if_expr
-  | WHILE expr OPEN_BLOCK scoped_expr CLOSE_BLOCK   # while_statement
-  | LET IDENTIFIER OP_ASSIGN expr                   # define_variable
-  | IDENTIFIER OP_ASSIGN expr                       # assign_variable
-  | PRINT expr                                      # print_statement
   | LPAR expr RPAR                                  # parentheses
   | NOT expr                                        # not
+  | fn_expr=expr LPAR (expr(COMMA expr)*)? RPAR     # anonymous_function_call
   | left=expr op=(OP_DIV|OP_MULT)       right=expr  # multiply_divide
   | left=expr op=(OP_PLUS|OP_MINUS)     right=expr  # add_subtract
   | left=expr op=(GT|GE|LT|LE|EQ|NEQ)   right=expr  # comparison
   | left=expr op=(AND|OR)               right=expr  # conjunction
+  | if_statement (else_if_statement)* (else_statement)?  # if_expr
+  | WHILE expr OPEN_BLOCK scoped_expr CLOSE_BLOCK   # while_statement
+  | LET IDENTIFIER OP_ASSIGN expr                   # define_variable
+  | IDENTIFIER OP_ASSIGN expr                       # assign_variable
+  | FUNCTION ident=IDENTIFIER? LPAR (IDENTIFIER(COMMA IDENTIFIER)*)? RPAR OPEN_BLOCK scoped_expr CLOSE_BLOCK # function_decl
+  | ident=IDENTIFIER LPAR (expr(COMMA expr)*)? RPAR # function_call
+  | PRINT expr                                      # print_statement
   | IDENTIFIER                                      # read_variable
   ;
 

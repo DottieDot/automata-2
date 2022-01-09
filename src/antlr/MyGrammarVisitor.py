@@ -124,6 +124,11 @@ class MyGrammarVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MyGrammarParser#while_statement.
+    def visitWhile_statement(self, ctx:MyGrammarParser.While_statementContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MyGrammarParser#add_subtract.
     def visitAdd_subtract(self, ctx:MyGrammarParser.Add_subtractContext):
         return self.visitChildren(ctx)

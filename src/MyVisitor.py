@@ -2,7 +2,6 @@ from antlr.MyGrammarParser import MyGrammarParser
 from antlr.MyGrammarVisitor import MyGrammarVisitor
 from lang import *
 
-
 class MyVisitor(MyGrammarVisitor):
   def __init__(self) -> None:
     super().__init__()
@@ -193,3 +192,10 @@ class MyVisitor(MyGrammarVisitor):
   # Visit a parse tree produced by MyGrammarParser#print_statement.
   def visitPrint_statement(self, ctx:MyGrammarParser.Print_statementContext):
     return PrintExprNode(self.visit(ctx.expr()))
+
+    # Visit a parse tree produced by MyGrammarParser#while_statement.
+  def visitWhile_statement(self, ctx:MyGrammarParser.While_statementContext):
+    return WhileNode(
+      self.visit(ctx.expr()),
+      self.visit(ctx.scoped_expr())
+    )

@@ -16,3 +16,4 @@ from .VariableDefinitionNode import *
 from .FunctionExprNode import *
 from .AnonymousFunctionCallNode import *
 from .PrintExprNode import *
+from .WhileNode import *
