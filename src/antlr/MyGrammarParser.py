@@ -11,42 +11,59 @@ else:
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3#")
-        buf.write("d\4\2\t\2\4\3\t\3\4\4\t\4\3\2\3\2\3\3\3\3\3\3\7\3\16\n")
-        buf.write("\3\f\3\16\3\21\13\3\3\3\5\3\24\n\3\3\4\3\4\3\4\3\4\3\4")
-        buf.write("\3\4\3\4\3\4\5\4\36\n\4\3\4\3\4\3\4\3\4\7\4$\n\4\f\4\16")
-        buf.write("\4\'\13\4\5\4)\n\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4")
-        buf.write("\3\4\7\4\65\n\4\f\4\16\48\13\4\5\4:\n\4\3\4\3\4\3\4\3")
-        buf.write("\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4")
-        buf.write("\3\4\3\4\3\4\3\4\5\4Q\n\4\3\4\3\4\3\4\3\4\3\4\3\4\3\4")
-        buf.write("\3\4\3\4\3\4\3\4\3\4\7\4_\n\4\f\4\16\4b\13\4\3\4\2\3\6")
-        buf.write("\5\2\4\6\2\7\3\2\34\35\3\2\16\17\3\2\f\r\3\2\5\n\3\2\3")
-        buf.write("\4\2w\2\b\3\2\2\2\4\17\3\2\2\2\6P\3\2\2\2\b\t\5\4\3\2")
-        buf.write("\t\3\3\2\2\2\n\13\5\6\4\2\13\f\7\23\2\2\f\16\3\2\2\2\r")
-        buf.write("\n\3\2\2\2\16\21\3\2\2\2\17\r\3\2\2\2\17\20\3\2\2\2\20")
-        buf.write("\23\3\2\2\2\21\17\3\2\2\2\22\24\5\6\4\2\23\22\3\2\2\2")
-        buf.write("\23\24\3\2\2\2\24\5\3\2\2\2\25\26\b\4\1\2\26Q\7 \2\2\27")
-        buf.write("Q\7!\2\2\30Q\t\2\2\2\31Q\7\36\2\2\32Q\7\37\2\2\33\35\7")
-        buf.write("\33\2\2\34\36\7\"\2\2\35\34\3\2\2\2\35\36\3\2\2\2\36\37")
-        buf.write("\3\2\2\2\37(\7\21\2\2 %\7\"\2\2!\"\7\26\2\2\"$\7\"\2\2")
-        buf.write("#!\3\2\2\2$\'\3\2\2\2%#\3\2\2\2%&\3\2\2\2&)\3\2\2\2\'")
-        buf.write("%\3\2\2\2( \3\2\2\2()\3\2\2\2)*\3\2\2\2*+\7\22\2\2+,\7")
-        buf.write("\24\2\2,-\5\4\3\2-.\7\25\2\2.Q\3\2\2\2/\60\7\"\2\2\60")
-        buf.write("9\7\21\2\2\61\66\5\6\4\2\62\63\7\26\2\2\63\65\5\6\4\2")
-        buf.write("\64\62\3\2\2\2\658\3\2\2\2\66\64\3\2\2\2\66\67\3\2\2\2")
-        buf.write("\67:\3\2\2\28\66\3\2\2\29\61\3\2\2\29:\3\2\2\2:;\3\2\2")
-        buf.write("\2;Q\7\22\2\2<=\7\27\2\2=>\7\"\2\2>?\7\20\2\2?Q\5\6\4")
-        buf.write("\f@A\7\"\2\2AB\7\20\2\2BQ\5\6\4\13CD\7\30\2\2DE\5\6\4")
-        buf.write("\2EF\7\24\2\2FG\5\4\3\2GH\7\25\2\2HQ\3\2\2\2IJ\7\21\2")
-        buf.write("\2JK\5\6\4\2KL\7\22\2\2LQ\3\2\2\2MN\7\13\2\2NQ\5\6\4\b")
-        buf.write("OQ\7\"\2\2P\25\3\2\2\2P\27\3\2\2\2P\30\3\2\2\2P\31\3\2")
-        buf.write("\2\2P\32\3\2\2\2P\33\3\2\2\2P/\3\2\2\2P<\3\2\2\2P@\3\2")
-        buf.write("\2\2PC\3\2\2\2PI\3\2\2\2PM\3\2\2\2PO\3\2\2\2Q`\3\2\2\2")
-        buf.write("RS\f\7\2\2ST\t\3\2\2T_\5\6\4\bUV\f\6\2\2VW\t\4\2\2W_\5")
-        buf.write("\6\4\7XY\f\5\2\2YZ\t\5\2\2Z_\5\6\4\6[\\\f\4\2\2\\]\t\6")
-        buf.write("\2\2]_\5\6\4\5^R\3\2\2\2^U\3\2\2\2^X\3\2\2\2^[\3\2\2\2")
-        buf.write("_b\3\2\2\2`^\3\2\2\2`a\3\2\2\2a\7\3\2\2\2b`\3\2\2\2\f")
-        buf.write("\17\23\35%(\669P^`")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3%")
+        buf.write("\u008f\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7")
+        buf.write("\3\2\3\2\3\3\3\3\3\3\7\3\24\n\3\f\3\16\3\27\13\3\3\3\5")
+        buf.write("\3\32\n\3\3\4\3\4\3\4\3\4\3\4\3\4\3\5\3\5\3\5\3\5\3\5")
+        buf.write("\3\5\3\5\3\6\3\6\3\6\3\6\3\6\3\7\3\7\3\7\3\7\3\7\3\7\3")
+        buf.write("\7\3\7\5\7\66\n\7\3\7\3\7\3\7\3\7\7\7<\n\7\f\7\16\7?\13")
+        buf.write("\7\5\7A\n\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\7")
+        buf.write("\7M\n\7\f\7\16\7P\13\7\5\7R\n\7\3\7\3\7\3\7\7\7W\n\7\f")
+        buf.write("\7\16\7Z\13\7\3\7\5\7]\n\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7")
+        buf.write("\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\5\7o\n\7\3\7\3\7")
+        buf.write("\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3\7\3")
+        buf.write("\7\3\7\7\7\u0082\n\7\f\7\16\7\u0085\13\7\5\7\u0087\n\7")
+        buf.write("\3\7\7\7\u008a\n\7\f\7\16\7\u008d\13\7\3\7\2\3\f\b\2\4")
+        buf.write("\6\b\n\f\2\7\3\2\36\37\3\2\16\17\3\2\f\r\3\2\5\n\3\2\3")
+        buf.write("\4\2\u00a5\2\16\3\2\2\2\4\25\3\2\2\2\6\33\3\2\2\2\b!\3")
+        buf.write("\2\2\2\n(\3\2\2\2\fn\3\2\2\2\16\17\5\4\3\2\17\3\3\2\2")
+        buf.write("\2\20\21\5\f\7\2\21\22\7\23\2\2\22\24\3\2\2\2\23\20\3")
+        buf.write("\2\2\2\24\27\3\2\2\2\25\23\3\2\2\2\25\26\3\2\2\2\26\31")
+        buf.write("\3\2\2\2\27\25\3\2\2\2\30\32\5\f\7\2\31\30\3\2\2\2\31")
+        buf.write("\32\3\2\2\2\32\5\3\2\2\2\33\34\7\31\2\2\34\35\5\f\7\2")
+        buf.write("\35\36\7\24\2\2\36\37\5\4\3\2\37 \7\25\2\2 \7\3\2\2\2")
+        buf.write("!\"\7\32\2\2\"#\7\31\2\2#$\5\f\7\2$%\7\24\2\2%&\5\4\3")
+        buf.write("\2&\'\7\25\2\2\'\t\3\2\2\2()\7\32\2\2)*\7\24\2\2*+\5\4")
+        buf.write("\3\2+,\7\25\2\2,\13\3\2\2\2-.\b\7\1\2.o\7\"\2\2/o\7#\2")
+        buf.write("\2\60o\t\2\2\2\61o\7 \2\2\62o\7!\2\2\63\65\7\35\2\2\64")
+        buf.write("\66\7$\2\2\65\64\3\2\2\2\65\66\3\2\2\2\66\67\3\2\2\2\67")
+        buf.write("@\7\21\2\28=\7$\2\29:\7\26\2\2:<\7$\2\2;9\3\2\2\2<?\3")
+        buf.write("\2\2\2=;\3\2\2\2=>\3\2\2\2>A\3\2\2\2?=\3\2\2\2@8\3\2\2")
+        buf.write("\2@A\3\2\2\2AB\3\2\2\2BC\7\22\2\2CD\7\24\2\2DE\5\4\3\2")
+        buf.write("EF\7\25\2\2Fo\3\2\2\2GH\7$\2\2HQ\7\21\2\2IN\5\f\7\2JK")
+        buf.write("\7\26\2\2KM\5\f\7\2LJ\3\2\2\2MP\3\2\2\2NL\3\2\2\2NO\3")
+        buf.write("\2\2\2OR\3\2\2\2PN\3\2\2\2QI\3\2\2\2QR\3\2\2\2RS\3\2\2")
+        buf.write("\2So\7\22\2\2TX\5\6\4\2UW\5\b\5\2VU\3\2\2\2WZ\3\2\2\2")
+        buf.write("XV\3\2\2\2XY\3\2\2\2Y\\\3\2\2\2ZX\3\2\2\2[]\5\n\6\2\\")
+        buf.write("[\3\2\2\2\\]\3\2\2\2]o\3\2\2\2^_\7\30\2\2_`\7$\2\2`a\7")
+        buf.write("\20\2\2ao\5\f\7\fbc\7$\2\2cd\7\20\2\2do\5\f\7\13ef\7\27")
+        buf.write("\2\2fo\5\f\7\ngh\7\21\2\2hi\5\f\7\2ij\7\22\2\2jo\3\2\2")
+        buf.write("\2kl\7\13\2\2lo\5\f\7\bmo\7$\2\2n-\3\2\2\2n/\3\2\2\2n")
+        buf.write("\60\3\2\2\2n\61\3\2\2\2n\62\3\2\2\2n\63\3\2\2\2nG\3\2")
+        buf.write("\2\2nT\3\2\2\2n^\3\2\2\2nb\3\2\2\2ne\3\2\2\2ng\3\2\2\2")
+        buf.write("nk\3\2\2\2nm\3\2\2\2o\u008b\3\2\2\2pq\f\7\2\2qr\t\3\2")
+        buf.write("\2r\u008a\5\f\7\bst\f\6\2\2tu\t\4\2\2u\u008a\5\f\7\7v")
+        buf.write("w\f\5\2\2wx\t\5\2\2x\u008a\5\f\7\6yz\f\4\2\2z{\t\6\2\2")
+        buf.write("{\u008a\5\f\7\5|}\f\16\2\2}\u0086\7\21\2\2~\u0083\5\f")
+        buf.write("\7\2\177\u0080\7\26\2\2\u0080\u0082\5\f\7\2\u0081\177")
+        buf.write("\3\2\2\2\u0082\u0085\3\2\2\2\u0083\u0081\3\2\2\2\u0083")
+        buf.write("\u0084\3\2\2\2\u0084\u0087\3\2\2\2\u0085\u0083\3\2\2\2")
+        buf.write("\u0086~\3\2\2\2\u0086\u0087\3\2\2\2\u0087\u0088\3\2\2")
+        buf.write("\2\u0088\u008a\7\22\2\2\u0089p\3\2\2\2\u0089s\3\2\2\2")
+        buf.write("\u0089v\3\2\2\2\u0089y\3\2\2\2\u0089|\3\2\2\2\u008a\u008d")
+        buf.write("\3\2\2\2\u008b\u0089\3\2\2\2\u008b\u008c\3\2\2\2\u008c")
+        buf.write("\r\3\2\2\2\u008d\u008b\3\2\2\2\20\25\31\65=@NQX\\n\u0083")
+        buf.write("\u0086\u0089\u008b")
         return buf.getvalue()
 
 
@@ -62,22 +79,26 @@ class MyGrammarParser ( Parser ):
 
     literalNames = [ "<INVALID>", "'&&'", "'||'", "'>='", "'<='", "'=='", 
                      "'!='", "'>'", "'<'", "'!'", "'+'", "'-'", "'*'", "'/'", 
-                     "'='", "'('", "')'", "';'", "'{'", "'}'", "','", "'let'", 
-                     "'if'", "'while'", "'for'", "'fn'", "'true'", "'false'", 
-                     "'None'", "'NaN'" ]
+                     "'='", "'('", "')'", "';'", "'{'", "'}'", "','", "'$'", 
+                     "'let'", "'if'", "'else'", "'while'", "'for'", "'fn'", 
+                     "'true'", "'false'", "'None'", "'NaN'" ]
 
     symbolicNames = [ "<INVALID>", "AND", "OR", "GE", "LE", "EQ", "NEQ", 
                       "GT", "LT", "NOT", "OP_PLUS", "OP_MINUS", "OP_MULT", 
                       "OP_DIV", "OP_ASSIGN", "LPAR", "RPAR", "EOS", "OPEN_BLOCK", 
-                      "CLOSE_BLOCK", "COMMA", "LET", "IF", "WHILE", "FOR", 
-                      "FUNCTION", "TRUE", "FALSE", "NONE", "NAN", "INTEGER", 
-                      "FLOAT", "IDENTIFIER", "WHITESPACE" ]
+                      "CLOSE_BLOCK", "COMMA", "PRINT", "LET", "IF", "ELSE", 
+                      "WHILE", "FOR", "FUNCTION", "TRUE", "FALSE", "NONE", 
+                      "NAN", "INTEGER", "FLOAT", "IDENTIFIER", "WHITESPACE" ]
 
     RULE_compile_unit = 0
     RULE_scoped_expr = 1
-    RULE_expr = 2
+    RULE_if_statement = 2
+    RULE_else_if_statement = 3
+    RULE_else_statement = 4
+    RULE_expr = 5
 
-    ruleNames =  [ "compile_unit", "scoped_expr", "expr" ]
+    ruleNames =  [ "compile_unit", "scoped_expr", "if_statement", "else_if_statement", 
+                   "else_statement", "expr" ]
 
     EOF = Token.EOF
     AND=1
@@ -100,19 +121,21 @@ class MyGrammarParser ( Parser ):
     OPEN_BLOCK=18
     CLOSE_BLOCK=19
     COMMA=20
-    LET=21
-    IF=22
-    WHILE=23
-    FOR=24
-    FUNCTION=25
-    TRUE=26
-    FALSE=27
-    NONE=28
-    NAN=29
-    INTEGER=30
-    FLOAT=31
-    IDENTIFIER=32
-    WHITESPACE=33
+    PRINT=21
+    LET=22
+    IF=23
+    ELSE=24
+    WHILE=25
+    FOR=26
+    FUNCTION=27
+    TRUE=28
+    FALSE=29
+    NONE=30
+    NAN=31
+    INTEGER=32
+    FLOAT=33
+    IDENTIFIER=34
+    WHITESPACE=35
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -160,7 +183,7 @@ class MyGrammarParser ( Parser ):
         self.enterRule(localctx, 0, self.RULE_compile_unit)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 6
+            self.state = 12
             self.scoped_expr()
         except RecognitionException as re:
             localctx.exception = re
@@ -219,27 +242,233 @@ class MyGrammarParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 13
+            self.state = 19
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,0,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
-                    self.state = 8
+                    self.state = 14
                     self.expr(0)
-                    self.state = 9
+                    self.state = 15
                     self.match(MyGrammarParser.EOS) 
-                self.state = 15
+                self.state = 21
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,0,self._ctx)
 
-            self.state = 17
+            self.state = 23
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MyGrammarParser.NOT) | (1 << MyGrammarParser.LPAR) | (1 << MyGrammarParser.LET) | (1 << MyGrammarParser.IF) | (1 << MyGrammarParser.FUNCTION) | (1 << MyGrammarParser.TRUE) | (1 << MyGrammarParser.FALSE) | (1 << MyGrammarParser.NONE) | (1 << MyGrammarParser.NAN) | (1 << MyGrammarParser.INTEGER) | (1 << MyGrammarParser.FLOAT) | (1 << MyGrammarParser.IDENTIFIER))) != 0):
-                self.state = 16
+            if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MyGrammarParser.NOT) | (1 << MyGrammarParser.LPAR) | (1 << MyGrammarParser.PRINT) | (1 << MyGrammarParser.LET) | (1 << MyGrammarParser.IF) | (1 << MyGrammarParser.FUNCTION) | (1 << MyGrammarParser.TRUE) | (1 << MyGrammarParser.FALSE) | (1 << MyGrammarParser.NONE) | (1 << MyGrammarParser.NAN) | (1 << MyGrammarParser.INTEGER) | (1 << MyGrammarParser.FLOAT) | (1 << MyGrammarParser.IDENTIFIER))) != 0):
+                self.state = 22
                 localctx.final_expr = self.expr(0)
 
 
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class If_statementContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def IF(self):
+            return self.getToken(MyGrammarParser.IF, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(MyGrammarParser.ExprContext,0)
+
+
+        def OPEN_BLOCK(self):
+            return self.getToken(MyGrammarParser.OPEN_BLOCK, 0)
+
+        def scoped_expr(self):
+            return self.getTypedRuleContext(MyGrammarParser.Scoped_exprContext,0)
+
+
+        def CLOSE_BLOCK(self):
+            return self.getToken(MyGrammarParser.CLOSE_BLOCK, 0)
+
+        def getRuleIndex(self):
+            return MyGrammarParser.RULE_if_statement
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIf_statement" ):
+                listener.enterIf_statement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIf_statement" ):
+                listener.exitIf_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIf_statement" ):
+                return visitor.visitIf_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def if_statement(self):
+
+        localctx = MyGrammarParser.If_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 4, self.RULE_if_statement)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 25
+            self.match(MyGrammarParser.IF)
+            self.state = 26
+            self.expr(0)
+            self.state = 27
+            self.match(MyGrammarParser.OPEN_BLOCK)
+            self.state = 28
+            self.scoped_expr()
+            self.state = 29
+            self.match(MyGrammarParser.CLOSE_BLOCK)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Else_if_statementContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ELSE(self):
+            return self.getToken(MyGrammarParser.ELSE, 0)
+
+        def IF(self):
+            return self.getToken(MyGrammarParser.IF, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(MyGrammarParser.ExprContext,0)
+
+
+        def OPEN_BLOCK(self):
+            return self.getToken(MyGrammarParser.OPEN_BLOCK, 0)
+
+        def scoped_expr(self):
+            return self.getTypedRuleContext(MyGrammarParser.Scoped_exprContext,0)
+
+
+        def CLOSE_BLOCK(self):
+            return self.getToken(MyGrammarParser.CLOSE_BLOCK, 0)
+
+        def getRuleIndex(self):
+            return MyGrammarParser.RULE_else_if_statement
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterElse_if_statement" ):
+                listener.enterElse_if_statement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitElse_if_statement" ):
+                listener.exitElse_if_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElse_if_statement" ):
+                return visitor.visitElse_if_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def else_if_statement(self):
+
+        localctx = MyGrammarParser.Else_if_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_else_if_statement)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 31
+            self.match(MyGrammarParser.ELSE)
+            self.state = 32
+            self.match(MyGrammarParser.IF)
+            self.state = 33
+            self.expr(0)
+            self.state = 34
+            self.match(MyGrammarParser.OPEN_BLOCK)
+            self.state = 35
+            self.scoped_expr()
+            self.state = 36
+            self.match(MyGrammarParser.CLOSE_BLOCK)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class Else_statementContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ELSE(self):
+            return self.getToken(MyGrammarParser.ELSE, 0)
+
+        def OPEN_BLOCK(self):
+            return self.getToken(MyGrammarParser.OPEN_BLOCK, 0)
+
+        def scoped_expr(self):
+            return self.getTypedRuleContext(MyGrammarParser.Scoped_exprContext,0)
+
+
+        def CLOSE_BLOCK(self):
+            return self.getToken(MyGrammarParser.CLOSE_BLOCK, 0)
+
+        def getRuleIndex(self):
+            return MyGrammarParser.RULE_else_statement
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterElse_statement" ):
+                listener.enterElse_statement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitElse_statement" ):
+                listener.exitElse_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitElse_statement" ):
+                return visitor.visitElse_statement(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+
+
+    def else_statement(self):
+
+        localctx = MyGrammarParser.Else_statementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 8, self.RULE_else_statement)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 38
+            self.match(MyGrammarParser.ELSE)
+            self.state = 39
+            self.match(MyGrammarParser.OPEN_BLOCK)
+            self.state = 40
+            self.scoped_expr()
+            self.state = 41
+            self.match(MyGrammarParser.CLOSE_BLOCK)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -263,6 +492,44 @@ class MyGrammarParser ( Parser ):
      
         def copyFrom(self, ctx:ParserRuleContext):
             super().copyFrom(ctx)
+
+
+    class Anonymous_function_callContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a MyGrammarParser.ExprContext
+            super().__init__(parser)
+            self.fn_expr = None # ExprContext
+            self.copyFrom(ctx)
+
+        def LPAR(self):
+            return self.getToken(MyGrammarParser.LPAR, 0)
+        def RPAR(self):
+            return self.getToken(MyGrammarParser.RPAR, 0)
+        def expr(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(MyGrammarParser.ExprContext)
+            else:
+                return self.getTypedRuleContext(MyGrammarParser.ExprContext,i)
+
+        def COMMA(self, i:int=None):
+            if i is None:
+                return self.getTokens(MyGrammarParser.COMMA)
+            else:
+                return self.getToken(MyGrammarParser.COMMA, i)
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAnonymous_function_call" ):
+                listener.enterAnonymous_function_call(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAnonymous_function_call" ):
+                listener.exitAnonymous_function_call(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitAnonymous_function_call" ):
+                return visitor.visitAnonymous_function_call(self)
+            else:
+                return visitor.visitChildren(self)
 
 
     class ParenthesesContext(ExprContext):
@@ -469,6 +736,40 @@ class MyGrammarParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
+    class If_exprContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a MyGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def if_statement(self):
+            return self.getTypedRuleContext(MyGrammarParser.If_statementContext,0)
+
+        def else_if_statement(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(MyGrammarParser.Else_if_statementContext)
+            else:
+                return self.getTypedRuleContext(MyGrammarParser.Else_if_statementContext,i)
+
+        def else_statement(self):
+            return self.getTypedRuleContext(MyGrammarParser.Else_statementContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIf_expr" ):
+                listener.enterIf_expr(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIf_expr" ):
+                listener.exitIf_expr(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitIf_expr" ):
+                return visitor.visitIf_expr(self)
+            else:
+                return visitor.visitChildren(self)
+
+
     class Int_literalContext(ExprContext):
 
         def __init__(self, parser, ctx:ParserRuleContext): # actually a MyGrammarParser.ExprContext
@@ -562,6 +863,33 @@ class MyGrammarParser ( Parser ):
         def accept(self, visitor:ParseTreeVisitor):
             if hasattr( visitor, "visitNot" ):
                 return visitor.visitNot(self)
+            else:
+                return visitor.visitChildren(self)
+
+
+    class Print_statementContext(ExprContext):
+
+        def __init__(self, parser, ctx:ParserRuleContext): # actually a MyGrammarParser.ExprContext
+            super().__init__(parser)
+            self.copyFrom(ctx)
+
+        def PRINT(self):
+            return self.getToken(MyGrammarParser.PRINT, 0)
+        def expr(self):
+            return self.getTypedRuleContext(MyGrammarParser.ExprContext,0)
+
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrint_statement" ):
+                listener.enterPrint_statement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrint_statement" ):
+                listener.exitPrint_statement(self)
+
+        def accept(self, visitor:ParseTreeVisitor):
+            if hasattr( visitor, "visitPrint_statement" ):
+                return visitor.visitPrint_statement(self)
             else:
                 return visitor.visitChildren(self)
 
@@ -702,40 +1030,6 @@ class MyGrammarParser ( Parser ):
                 return visitor.visitChildren(self)
 
 
-    class If_statementContext(ExprContext):
-
-        def __init__(self, parser, ctx:ParserRuleContext): # actually a MyGrammarParser.ExprContext
-            super().__init__(parser)
-            self.copyFrom(ctx)
-
-        def IF(self):
-            return self.getToken(MyGrammarParser.IF, 0)
-        def expr(self):
-            return self.getTypedRuleContext(MyGrammarParser.ExprContext,0)
-
-        def OPEN_BLOCK(self):
-            return self.getToken(MyGrammarParser.OPEN_BLOCK, 0)
-        def scoped_expr(self):
-            return self.getTypedRuleContext(MyGrammarParser.Scoped_exprContext,0)
-
-        def CLOSE_BLOCK(self):
-            return self.getToken(MyGrammarParser.CLOSE_BLOCK, 0)
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterIf_statement" ):
-                listener.enterIf_statement(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitIf_statement" ):
-                listener.exitIf_statement(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIf_statement" ):
-                return visitor.visitIf_statement(self)
-            else:
-                return visitor.visitChildren(self)
-
-
     class Nan_literalContext(ExprContext):
 
         def __init__(self, parser, ctx:ParserRuleContext): # actually a MyGrammarParser.ExprContext
@@ -801,20 +1095,20 @@ class MyGrammarParser ( Parser ):
         _parentState = self.state
         localctx = MyGrammarParser.ExprContext(self, self._ctx, _parentState)
         _prevctx = localctx
-        _startState = 4
-        self.enterRecursionRule(localctx, 4, self.RULE_expr, _p)
+        _startState = 10
+        self.enterRecursionRule(localctx, 10, self.RULE_expr, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 78
+            self.state = 108
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,9,self._ctx)
             if la_ == 1:
                 localctx = MyGrammarParser.Int_literalContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
 
-                self.state = 20
+                self.state = 44
                 self.match(MyGrammarParser.INTEGER)
                 pass
 
@@ -822,7 +1116,7 @@ class MyGrammarParser ( Parser ):
                 localctx = MyGrammarParser.Float_literalContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 21
+                self.state = 45
                 self.match(MyGrammarParser.FLOAT)
                 pass
 
@@ -830,7 +1124,7 @@ class MyGrammarParser ( Parser ):
                 localctx = MyGrammarParser.Bool_literalContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 22
+                self.state = 46
                 _la = self._input.LA(1)
                 if not(_la==MyGrammarParser.TRUE or _la==MyGrammarParser.FALSE):
                     self._errHandler.recoverInline(self)
@@ -843,7 +1137,7 @@ class MyGrammarParser ( Parser ):
                 localctx = MyGrammarParser.None_literalContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 23
+                self.state = 47
                 self.match(MyGrammarParser.NONE)
                 pass
 
@@ -851,7 +1145,7 @@ class MyGrammarParser ( Parser ):
                 localctx = MyGrammarParser.Nan_literalContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 24
+                self.state = 48
                 self.match(MyGrammarParser.NAN)
                 pass
 
@@ -859,45 +1153,45 @@ class MyGrammarParser ( Parser ):
                 localctx = MyGrammarParser.Function_declContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 25
+                self.state = 49
                 self.match(MyGrammarParser.FUNCTION)
-                self.state = 27
+                self.state = 51
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==MyGrammarParser.IDENTIFIER:
-                    self.state = 26
+                    self.state = 50
                     localctx.ident = self.match(MyGrammarParser.IDENTIFIER)
 
 
-                self.state = 29
+                self.state = 53
                 self.match(MyGrammarParser.LPAR)
-                self.state = 38
+                self.state = 62
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==MyGrammarParser.IDENTIFIER:
-                    self.state = 30
+                    self.state = 54
                     self.match(MyGrammarParser.IDENTIFIER)
-                    self.state = 35
+                    self.state = 59
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     while _la==MyGrammarParser.COMMA:
-                        self.state = 31
+                        self.state = 55
                         self.match(MyGrammarParser.COMMA)
-                        self.state = 32
+                        self.state = 56
                         self.match(MyGrammarParser.IDENTIFIER)
-                        self.state = 37
+                        self.state = 61
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
 
 
 
-                self.state = 40
+                self.state = 64
                 self.match(MyGrammarParser.RPAR)
-                self.state = 41
+                self.state = 65
                 self.match(MyGrammarParser.OPEN_BLOCK)
-                self.state = 42
+                self.state = 66
                 self.scoped_expr()
-                self.state = 43
+                self.state = 67
                 self.match(MyGrammarParser.CLOSE_BLOCK)
                 pass
 
@@ -905,128 +1199,149 @@ class MyGrammarParser ( Parser ):
                 localctx = MyGrammarParser.Function_callContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 45
+                self.state = 69
                 localctx.ident = self.match(MyGrammarParser.IDENTIFIER)
-                self.state = 46
+                self.state = 70
                 self.match(MyGrammarParser.LPAR)
-                self.state = 55
+                self.state = 79
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
-                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MyGrammarParser.NOT) | (1 << MyGrammarParser.LPAR) | (1 << MyGrammarParser.LET) | (1 << MyGrammarParser.IF) | (1 << MyGrammarParser.FUNCTION) | (1 << MyGrammarParser.TRUE) | (1 << MyGrammarParser.FALSE) | (1 << MyGrammarParser.NONE) | (1 << MyGrammarParser.NAN) | (1 << MyGrammarParser.INTEGER) | (1 << MyGrammarParser.FLOAT) | (1 << MyGrammarParser.IDENTIFIER))) != 0):
-                    self.state = 47
+                if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MyGrammarParser.NOT) | (1 << MyGrammarParser.LPAR) | (1 << MyGrammarParser.PRINT) | (1 << MyGrammarParser.LET) | (1 << MyGrammarParser.IF) | (1 << MyGrammarParser.FUNCTION) | (1 << MyGrammarParser.TRUE) | (1 << MyGrammarParser.FALSE) | (1 << MyGrammarParser.NONE) | (1 << MyGrammarParser.NAN) | (1 << MyGrammarParser.INTEGER) | (1 << MyGrammarParser.FLOAT) | (1 << MyGrammarParser.IDENTIFIER))) != 0):
+                    self.state = 71
                     self.expr(0)
-                    self.state = 52
+                    self.state = 76
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
                     while _la==MyGrammarParser.COMMA:
-                        self.state = 48
+                        self.state = 72
                         self.match(MyGrammarParser.COMMA)
-                        self.state = 49
+                        self.state = 73
                         self.expr(0)
-                        self.state = 54
+                        self.state = 78
                         self._errHandler.sync(self)
                         _la = self._input.LA(1)
 
 
 
-                self.state = 57
+                self.state = 81
                 self.match(MyGrammarParser.RPAR)
                 pass
 
             elif la_ == 8:
-                localctx = MyGrammarParser.Define_variableContext(self, localctx)
+                localctx = MyGrammarParser.If_exprContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 58
-                self.match(MyGrammarParser.LET)
-                self.state = 59
-                self.match(MyGrammarParser.IDENTIFIER)
-                self.state = 60
-                self.match(MyGrammarParser.OP_ASSIGN)
-                self.state = 61
-                self.expr(10)
+                self.state = 82
+                self.if_statement()
+                self.state = 86
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
+                while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                    if _alt==1:
+                        self.state = 83
+                        self.else_if_statement() 
+                    self.state = 88
+                    self._errHandler.sync(self)
+                    _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
+
+                self.state = 90
+                self._errHandler.sync(self)
+                la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
+                if la_ == 1:
+                    self.state = 89
+                    self.else_statement()
+
+
                 pass
 
             elif la_ == 9:
-                localctx = MyGrammarParser.Assign_variableContext(self, localctx)
+                localctx = MyGrammarParser.Define_variableContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 62
+                self.state = 92
+                self.match(MyGrammarParser.LET)
+                self.state = 93
                 self.match(MyGrammarParser.IDENTIFIER)
-                self.state = 63
+                self.state = 94
                 self.match(MyGrammarParser.OP_ASSIGN)
-                self.state = 64
-                self.expr(9)
+                self.state = 95
+                self.expr(10)
                 pass
 
             elif la_ == 10:
-                localctx = MyGrammarParser.If_statementContext(self, localctx)
+                localctx = MyGrammarParser.Assign_variableContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 65
-                self.match(MyGrammarParser.IF)
-                self.state = 66
-                self.expr(0)
-                self.state = 67
-                self.match(MyGrammarParser.OPEN_BLOCK)
-                self.state = 68
-                self.scoped_expr()
-                self.state = 69
-                self.match(MyGrammarParser.CLOSE_BLOCK)
+                self.state = 96
+                self.match(MyGrammarParser.IDENTIFIER)
+                self.state = 97
+                self.match(MyGrammarParser.OP_ASSIGN)
+                self.state = 98
+                self.expr(9)
                 pass
 
             elif la_ == 11:
-                localctx = MyGrammarParser.ParenthesesContext(self, localctx)
+                localctx = MyGrammarParser.Print_statementContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 71
-                self.match(MyGrammarParser.LPAR)
-                self.state = 72
-                self.expr(0)
-                self.state = 73
-                self.match(MyGrammarParser.RPAR)
+                self.state = 99
+                self.match(MyGrammarParser.PRINT)
+                self.state = 100
+                self.expr(8)
                 pass
 
             elif la_ == 12:
-                localctx = MyGrammarParser.NotContext(self, localctx)
+                localctx = MyGrammarParser.ParenthesesContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 75
-                self.match(MyGrammarParser.NOT)
-                self.state = 76
-                self.expr(6)
+                self.state = 101
+                self.match(MyGrammarParser.LPAR)
+                self.state = 102
+                self.expr(0)
+                self.state = 103
+                self.match(MyGrammarParser.RPAR)
                 pass
 
             elif la_ == 13:
+                localctx = MyGrammarParser.NotContext(self, localctx)
+                self._ctx = localctx
+                _prevctx = localctx
+                self.state = 105
+                self.match(MyGrammarParser.NOT)
+                self.state = 106
+                self.expr(6)
+                pass
+
+            elif la_ == 14:
                 localctx = MyGrammarParser.Read_variableContext(self, localctx)
                 self._ctx = localctx
                 _prevctx = localctx
-                self.state = 77
+                self.state = 107
                 self.match(MyGrammarParser.IDENTIFIER)
                 pass
 
 
             self._ctx.stop = self._input.LT(-1)
-            self.state = 94
+            self.state = 137
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,9,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 92
+                    self.state = 135
                     self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
+                    la_ = self._interp.adaptivePredict(self._input,12,self._ctx)
                     if la_ == 1:
                         localctx = MyGrammarParser.Multiply_divideContext(self, MyGrammarParser.ExprContext(self, _parentctx, _parentState))
                         localctx.left = _prevctx
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 80
+                        self.state = 110
                         if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 81
+                        self.state = 111
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not(_la==MyGrammarParser.OP_MULT or _la==MyGrammarParser.OP_DIV):
@@ -1034,7 +1349,7 @@ class MyGrammarParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 82
+                        self.state = 112
                         localctx.right = self.expr(6)
                         pass
 
@@ -1042,11 +1357,11 @@ class MyGrammarParser ( Parser ):
                         localctx = MyGrammarParser.Add_subtractContext(self, MyGrammarParser.ExprContext(self, _parentctx, _parentState))
                         localctx.left = _prevctx
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 83
+                        self.state = 113
                         if not self.precpred(self._ctx, 4):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 4)")
-                        self.state = 84
+                        self.state = 114
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not(_la==MyGrammarParser.OP_PLUS or _la==MyGrammarParser.OP_MINUS):
@@ -1054,7 +1369,7 @@ class MyGrammarParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 85
+                        self.state = 115
                         localctx.right = self.expr(5)
                         pass
 
@@ -1062,11 +1377,11 @@ class MyGrammarParser ( Parser ):
                         localctx = MyGrammarParser.ComparisonContext(self, MyGrammarParser.ExprContext(self, _parentctx, _parentState))
                         localctx.left = _prevctx
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 86
+                        self.state = 116
                         if not self.precpred(self._ctx, 3):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 3)")
-                        self.state = 87
+                        self.state = 117
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MyGrammarParser.GE) | (1 << MyGrammarParser.LE) | (1 << MyGrammarParser.EQ) | (1 << MyGrammarParser.NEQ) | (1 << MyGrammarParser.GT) | (1 << MyGrammarParser.LT))) != 0)):
@@ -1074,7 +1389,7 @@ class MyGrammarParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 88
+                        self.state = 118
                         localctx.right = self.expr(4)
                         pass
 
@@ -1082,11 +1397,11 @@ class MyGrammarParser ( Parser ):
                         localctx = MyGrammarParser.ConjunctionContext(self, MyGrammarParser.ExprContext(self, _parentctx, _parentState))
                         localctx.left = _prevctx
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
-                        self.state = 89
+                        self.state = 119
                         if not self.precpred(self._ctx, 2):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
-                        self.state = 90
+                        self.state = 120
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
                         if not(_la==MyGrammarParser.AND or _la==MyGrammarParser.OR):
@@ -1094,14 +1409,48 @@ class MyGrammarParser ( Parser ):
                         else:
                             self._errHandler.reportMatch(self)
                             self.consume()
-                        self.state = 91
+                        self.state = 121
                         localctx.right = self.expr(3)
                         pass
 
+                    elif la_ == 5:
+                        localctx = MyGrammarParser.Anonymous_function_callContext(self, MyGrammarParser.ExprContext(self, _parentctx, _parentState))
+                        localctx.fn_expr = _prevctx
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
+                        self.state = 122
+                        if not self.precpred(self._ctx, 12):
+                            from antlr4.error.Errors import FailedPredicateException
+                            raise FailedPredicateException(self, "self.precpred(self._ctx, 12)")
+                        self.state = 123
+                        self.match(MyGrammarParser.LPAR)
+                        self.state = 132
+                        self._errHandler.sync(self)
+                        _la = self._input.LA(1)
+                        if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MyGrammarParser.NOT) | (1 << MyGrammarParser.LPAR) | (1 << MyGrammarParser.PRINT) | (1 << MyGrammarParser.LET) | (1 << MyGrammarParser.IF) | (1 << MyGrammarParser.FUNCTION) | (1 << MyGrammarParser.TRUE) | (1 << MyGrammarParser.FALSE) | (1 << MyGrammarParser.NONE) | (1 << MyGrammarParser.NAN) | (1 << MyGrammarParser.INTEGER) | (1 << MyGrammarParser.FLOAT) | (1 << MyGrammarParser.IDENTIFIER))) != 0):
+                            self.state = 124
+                            self.expr(0)
+                            self.state = 129
+                            self._errHandler.sync(self)
+                            _la = self._input.LA(1)
+                            while _la==MyGrammarParser.COMMA:
+                                self.state = 125
+                                self.match(MyGrammarParser.COMMA)
+                                self.state = 126
+                                self.expr(0)
+                                self.state = 131
+                                self._errHandler.sync(self)
+                                _la = self._input.LA(1)
+
+
+
+                        self.state = 134
+                        self.match(MyGrammarParser.RPAR)
+                        pass
+
              
-                self.state = 96
+                self.state = 139
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,9,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,13,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -1116,7 +1465,7 @@ class MyGrammarParser ( Parser ):
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
-        self._predicates[2] = self.expr_sempred
+        self._predicates[5] = self.expr_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
@@ -1138,6 +1487,10 @@ class MyGrammarParser ( Parser ):
 
             if predIndex == 3:
                 return self.precpred(self._ctx, 2)
+         
+
+            if predIndex == 4:
+                return self.precpred(self._ctx, 12)
          
 
 

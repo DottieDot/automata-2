@@ -13,3 +13,6 @@ from .IfNode import *
 from .ScopeNode import *
 from .VariableAssignmentNode import *
 from .VariableDefinitionNode import *
+from .FunctionExprNode import *
+from .AnonymousFunctionCallNode import *
+from .PrintExprNode import *

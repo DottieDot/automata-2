@@ -15,7 +15,9 @@ class VariableDefinitionNode(ExprNode):
     self.value = value
 
   def get_value(self) -> Variable:
-    self.scope.define_variable(self.identifier, self.value.get_value())
+    value = self.value.get_value()
+    self.scope.define_variable(self.identifier, value)
+    return value
 
   def set_scope(self, scope: 'ScopeNode') -> None:
     super().set_scope(scope)

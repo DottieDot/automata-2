@@ -40,7 +40,13 @@ class MyVisitor(MyGrammarVisitor):
 
   # Visit a parse tree produced by MyGrammarParser#function_decl.
   def visitFunction_decl(self, ctx: MyGrammarParser.Function_declContext):
-    Variable()
+    params = ctx.IDENTIFIER()
+    if ctx.ident: params.pop(0)
+    fn = FunctionExprNode([str(ident) for ident in params], self.visit(ctx.scoped_expr()))
+    if ctx.ident:
+      return VariableDefinitionNode(ctx.ident.text, fn)
+    else:
+      return fn
 
   # Visit a parse tree produced by MyGrammarParser#parentheses.
   def visitParentheses(self, ctx: MyGrammarParser.ParenthesesContext):
@@ -108,7 +114,7 @@ class MyVisitor(MyGrammarVisitor):
     for param in ctx.expr():
       params.append(self.visit(param))
 
-    return FunctionCallNode(params)
+    return FunctionCallNode(ctx.ident.text, params)
 
   # Visit a parse tree produced by MyGrammarParser#multiply_divide.
   def visitMultiply_divide(self, ctx: MyGrammarParser.Multiply_divideContext):
@@ -156,3 +162,34 @@ class MyVisitor(MyGrammarVisitor):
       self.visit(ctx.expr()),
       self.visit(ctx.scoped_expr())
     )
+
+  # Visit a parse tree produced by MyGrammarParser#else_if_statement.
+  def visitElseIf_statement(self, ctx:MyGrammarParser.Else_if_statementContext):
+    return IfNode(
+      self.visit(ctx.expr()),
+      self.visit(ctx.scoped_expr())
+    )
+
+  # Visit a parse tree produced by MyGrammarParser#else_statement.
+  def visitElse_statement(self, ctx:MyGrammarParser.Else_statementContext):
+    return self.visit(ctx.scoped_expr())
+
+  # Visit a parse tree produced by MyGrammarParser#If_expr
+  def visitIf_expr(self, ctx:MyGrammarParser.If_exprContext):
+    if_statement = self.visit(ctx.if_statement())
+    last_statement = if_statement
+    for statement in ctx.else_if_statement():
+      node = self.visit(statement)
+      last_statement.set_next(node)
+      last_statement = node
+    if ctx.else_statement():
+      last_statement.set_next(self.visit(ctx.else_statement()))
+    return if_statement
+
+  # Visit a parse tree produced by MyGrammarParser#anonymous_function_call.
+  def visitAnonymous_function_call(self, ctx:MyGrammarParser.Anonymous_function_callContext):
+    return AnonymousFunctionCallNode(self.visit(ctx.fn_expr), [self.visit(expr) for expr in ctx.expr()[1:]])
+
+  # Visit a parse tree produced by MyGrammarParser#print_statement.
+  def visitPrint_statement(self, ctx:MyGrammarParser.Print_statementContext):
+    return PrintExprNode(self.visit(ctx.expr()))

@@ -26,6 +26,42 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MyGrammarParser#if_statement.
+    def enterIf_statement(self, ctx:MyGrammarParser.If_statementContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#if_statement.
+    def exitIf_statement(self, ctx:MyGrammarParser.If_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#else_if_statement.
+    def enterElse_if_statement(self, ctx:MyGrammarParser.Else_if_statementContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#else_if_statement.
+    def exitElse_if_statement(self, ctx:MyGrammarParser.Else_if_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#else_statement.
+    def enterElse_statement(self, ctx:MyGrammarParser.Else_statementContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#else_statement.
+    def exitElse_statement(self, ctx:MyGrammarParser.Else_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#anonymous_function_call.
+    def enterAnonymous_function_call(self, ctx:MyGrammarParser.Anonymous_function_callContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#anonymous_function_call.
+    def exitAnonymous_function_call(self, ctx:MyGrammarParser.Anonymous_function_callContext):
+        pass
+
+
     # Enter a parse tree produced by MyGrammarParser#parentheses.
     def enterParentheses(self, ctx:MyGrammarParser.ParenthesesContext):
         pass
@@ -80,6 +116,15 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MyGrammarParser#if_expr.
+    def enterIf_expr(self, ctx:MyGrammarParser.If_exprContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#if_expr.
+    def exitIf_expr(self, ctx:MyGrammarParser.If_exprContext):
+        pass
+
+
     # Enter a parse tree produced by MyGrammarParser#int_literal.
     def enterInt_literal(self, ctx:MyGrammarParser.Int_literalContext):
         pass
@@ -104,6 +149,15 @@ class MyGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by MyGrammarParser#not.
     def exitNot(self, ctx:MyGrammarParser.NotContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#print_statement.
+    def enterPrint_statement(self, ctx:MyGrammarParser.Print_statementContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#print_statement.
+    def exitPrint_statement(self, ctx:MyGrammarParser.Print_statementContext):
         pass
 
 
@@ -149,15 +203,6 @@ class MyGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by MyGrammarParser#float_literal.
     def exitFloat_literal(self, ctx:MyGrammarParser.Float_literalContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#if_statement.
-    def enterIf_statement(self, ctx:MyGrammarParser.If_statementContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#if_statement.
-    def exitIf_statement(self, ctx:MyGrammarParser.If_statementContext):
         pass
 
 

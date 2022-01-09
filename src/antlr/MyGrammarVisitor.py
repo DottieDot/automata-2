@@ -19,6 +19,26 @@ class MyGrammarVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MyGrammarParser#if_statement.
+    def visitIf_statement(self, ctx:MyGrammarParser.If_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#else_if_statement.
+    def visitElse_if_statement(self, ctx:MyGrammarParser.Else_if_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#else_statement.
+    def visitElse_statement(self, ctx:MyGrammarParser.Else_statementContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#anonymous_function_call.
+    def visitAnonymous_function_call(self, ctx:MyGrammarParser.Anonymous_function_callContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MyGrammarParser#parentheses.
     def visitParentheses(self, ctx:MyGrammarParser.ParenthesesContext):
         return self.visitChildren(ctx)
@@ -49,6 +69,11 @@ class MyGrammarVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MyGrammarParser#if_expr.
+    def visitIf_expr(self, ctx:MyGrammarParser.If_exprContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MyGrammarParser#int_literal.
     def visitInt_literal(self, ctx:MyGrammarParser.Int_literalContext):
         return self.visitChildren(ctx)
@@ -61,6 +86,11 @@ class MyGrammarVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MyGrammarParser#not.
     def visitNot(self, ctx:MyGrammarParser.NotContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#print_statement.
+    def visitPrint_statement(self, ctx:MyGrammarParser.Print_statementContext):
         return self.visitChildren(ctx)
 
 
@@ -86,11 +116,6 @@ class MyGrammarVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MyGrammarParser#float_literal.
     def visitFloat_literal(self, ctx:MyGrammarParser.Float_literalContext):
-        return self.visitChildren(ctx)
-
-
-    # Visit a parse tree produced by MyGrammarParser#if_statement.
-    def visitIf_statement(self, ctx:MyGrammarParser.If_statementContext):
         return self.visitChildren(ctx)
 
 

@@ -35,8 +35,8 @@ class Variable:
     if self._is_numeric() and rvalue._is_numeric():
       return Variable(
           self.value + rvalue.value,
-          VariableTypes.FLOAT if (
-              self.type == VariableTypes.INT and rvalue.type == VariableTypes.INT) else VariableTypes.INT
+          VariableTypes.INT if (
+              self.type == VariableTypes.INT and rvalue.type == VariableTypes.INT) else VariableTypes.FLOAT
       )
     else:
       return Variable(
@@ -48,8 +48,8 @@ class Variable:
     if self._is_numeric() and rvalue._is_numeric():
       return Variable(
           self.value - rvalue.value,
-          VariableTypes.FLOAT if (
-              self.type == VariableTypes.INT and rvalue.type == VariableTypes.INT) else VariableTypes.INT
+          VariableTypes.INT if (
+              self.type == VariableTypes.INT and rvalue.type == VariableTypes.INT) else VariableTypes.FLOAT
       )
     else:
       return Variable(
@@ -61,8 +61,8 @@ class Variable:
     if self._is_numeric() and rvalue._is_numeric():
       return Variable(
           self.value * rvalue.value,
-          VariableTypes.FLOAT if (
-              self.type == VariableTypes.INT and rvalue.type == VariableTypes.INT) else VariableTypes.INT
+          VariableTypes.INT if (
+              self.type == VariableTypes.INT and rvalue.type == VariableTypes.INT) else VariableTypes.FLOAT
       )
     else:
       return Variable(
