@@ -120,6 +120,6 @@ class Variable:
 
   def call(self, params: list[Self]) -> Self:
     if self.type != VariableTypes.FUNCTION:
-      raise f"{self.type} is not a callable type"
+      raise Exception(f"{self.type} is not a callable type")
     
     return self.value.call(params)

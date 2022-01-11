@@ -14,4 +14,4 @@ class ExprNode:
     self.scope = scope
 
   def get_value(self) -> Variable:
-    raise 'get_value is not implemented'
+    raise Exception('get_value is not implemented')

@@ -17,7 +17,7 @@ class Function:
 
   def call(self, params: list[Variable]) -> Variable:
     if len(params) != len(self._parameter_names):
-      raise f'expected {len(self._parameter_names)} paremeters, got {len(params)}'
+      raise Exception(f'expected {len(self._parameter_names)} paremeters, got {len(params)}')
 
     param_dict = {}
     for i in range(len(params)):
