@@ -163,7 +163,7 @@ class MyVisitor(MyGrammarVisitor):
     )
 
   # Visit a parse tree produced by MyGrammarParser#else_if_statement.
-  def visitElseIf_statement(self, ctx:MyGrammarParser.Else_if_statementContext):
+  def visitElse_if_statement(self, ctx:MyGrammarParser.Else_if_statementContext):
     return IfNode(
       self.visit(ctx.expr()),
       self.visit(ctx.scoped_expr())

@@ -1,6 +1,6 @@
+from __future__ import annotations
 from typing import Any
 from enum import Enum
-from typing_extensions import Self
 
 class VariableTypes(Enum):
   NONE = 0
@@ -16,13 +16,17 @@ class Variable:
   type: VariableTypes
 
   def _is_numeric(self) -> bool:
-    match self.type:
-      case VariableTypes.INT:
-        return True
-      case VariableTypes.FLOAT:
-        return True
-      case _:
-        return False
+    if self.type == VariableTypes.INT or self.type == VariableTypes.FLOAT:
+      return True
+    else:
+      return False
+    # match self.type:
+    #   case VariableTypes.INT:
+    #     return True
+    #   case VariableTypes.FLOAT:
+    #     return True
+    #   case _:
+    #     return False
 
   def __init__(self, value: Any, type: VariableTypes) -> None:
     self.value = value
@@ -31,7 +35,7 @@ class Variable:
   def is_truthy(self) -> bool:
     return not not self.value
 
-  def add(self, rvalue: Self) -> Self:
+  def add(self, rvalue: Variable) -> Variable:
     if self._is_numeric() and rvalue._is_numeric():
       return Variable(
           self.value + rvalue.value,
@@ -44,7 +48,7 @@ class Variable:
           VariableTypes.NAN
       )
 
-  def subtract(self, rvalue: Self) -> Self:
+  def subtract(self, rvalue: Variable) -> Variable:
     if self._is_numeric() and rvalue._is_numeric():
       return Variable(
           self.value - rvalue.value,
@@ -57,7 +61,7 @@ class Variable:
           VariableTypes.NAN
       )
 
-  def multiply(self, rvalue: Self) -> Self:
+  def multiply(self, rvalue: Variable) -> Variable:
     if self._is_numeric() and rvalue._is_numeric():
       return Variable(
           self.value * rvalue.value,
@@ -70,7 +74,7 @@ class Variable:
           VariableTypes.NAN
       )
 
-  def divide(self, rvalue: Self) -> Self:
+  def divide(self, rvalue: Variable) -> Variable:
     if self._is_numeric() and rvalue._is_numeric():
       return Variable(
           self.value / rvalue.value,
@@ -82,43 +86,43 @@ class Variable:
           VariableTypes.NAN
       )
 
-  def equals(self, rvalue: Self) -> Self:
+  def equals(self, rvalue: Variable) -> Variable:
     return Variable(
         self.type == rvalue.type and self.value == rvalue.value,
         VariableTypes.BOOL
     )
 
-  def not_equals(self, rvalue: Self) -> Self:
+  def not_equals(self, rvalue: Variable) -> Variable:
     return Variable(
         self.type == rvalue.type and self.value != rvalue.value,
         VariableTypes.BOOL
     )
 
-  def greater_than(self, rvalue: Self) -> Self:
+  def greater_than(self, rvalue: Variable) -> Variable:
     return Variable(
         self.type == rvalue.type and self.value > rvalue.value,
         VariableTypes.BOOL
     )
 
-  def lower_than(self, rvalue: Self) -> Self:
+  def lower_than(self, rvalue: Variable) -> Variable:
     return Variable(
         self.type == rvalue.type and self.value < rvalue.value,
         VariableTypes.BOOL
     )
 
-  def greater_or_equal(self, rvalue: Self) -> Self:
+  def greater_or_equal(self, rvalue: Variable) -> Variable:
     return Variable(
         self.type == rvalue.type and self.value >= rvalue.value,
         VariableTypes.BOOL
     )
 
-  def lower_or_equal(self, rvalue: Self) -> Self:
+  def lower_or_equal(self, rvalue: Variable) -> Variable:
     return Variable(
         self.type == rvalue.type and self.value <= rvalue.value,
         VariableTypes.BOOL
     )
 
-  def call(self, params: list[Self]) -> Self:
+  def call(self, params: list[Variable]) -> Variable:
     if self.type != VariableTypes.FUNCTION:
       raise Exception(f"{self.type} is not a callable type")
     

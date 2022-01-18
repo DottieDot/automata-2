@@ -1,6 +1,6 @@
 grammar MyGrammar;
 compile_unit
-  : scoped_expr  
+  : scoped_expr EOF
   ;
 
 scoped_expr
