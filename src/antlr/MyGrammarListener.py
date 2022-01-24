@@ -53,6 +53,15 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MyGrammarParser#assign_matrix_field.
+    def enterAssign_matrix_field(self, ctx:MyGrammarParser.Assign_matrix_fieldContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#assign_matrix_field.
+    def exitAssign_matrix_field(self, ctx:MyGrammarParser.Assign_matrix_fieldContext):
+        pass
+
+
     # Enter a parse tree produced by MyGrammarParser#anonymous_function_call.
     def enterAnonymous_function_call(self, ctx:MyGrammarParser.Anonymous_function_callContext):
         pass
@@ -86,6 +95,24 @@ class MyGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by MyGrammarParser#function_call.
     def exitFunction_call(self, ctx:MyGrammarParser.Function_callContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#matrix_defintion.
+    def enterMatrix_defintion(self, ctx:MyGrammarParser.Matrix_defintionContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#matrix_defintion.
+    def exitMatrix_defintion(self, ctx:MyGrammarParser.Matrix_defintionContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#repeat_until.
+    def enterRepeat_until(self, ctx:MyGrammarParser.Repeat_untilContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#repeat_until.
+    def exitRepeat_until(self, ctx:MyGrammarParser.Repeat_untilContext):
         pass
 
 
@@ -140,6 +167,15 @@ class MyGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by MyGrammarParser#function_decl.
     def exitFunction_decl(self, ctx:MyGrammarParser.Function_declContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#read_matrix_field.
+    def enterRead_matrix_field(self, ctx:MyGrammarParser.Read_matrix_fieldContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#read_matrix_field.
+    def exitRead_matrix_field(self, ctx:MyGrammarParser.Read_matrix_fieldContext):
         pass
 
 

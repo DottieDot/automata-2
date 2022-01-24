@@ -193,9 +193,40 @@ class MyVisitor(MyGrammarVisitor):
   def visitPrint_statement(self, ctx:MyGrammarParser.Print_statementContext):
     return PrintExprNode(self.visit(ctx.expr()))
 
-    # Visit a parse tree produced by MyGrammarParser#while_statement.
+  # Visit a parse tree produced by MyGrammarParser#while_statement.
   def visitWhile_statement(self, ctx:MyGrammarParser.While_statementContext):
     return WhileNode(
       self.visit(ctx.expr()),
       self.visit(ctx.scoped_expr())
+    )
+
+  # Visit a parse tree produced by MyGrammarParser#repeat_until.
+  def visitRepeat_until(self, ctx:MyGrammarParser.Repeat_untilContext):
+    return RepeatUntilNode(
+      self.visit(ctx.expr()),
+      self.visit(ctx.scoped_expr())
+    )
+
+  # Visit a parse tree produced by MyGrammarParser#read_matrix_field.
+  def visitRead_matrix_field(self, ctx:MyGrammarParser.Read_matrix_fieldContext):
+    return ReadmatrixExprNode(
+      str(ctx.IDENTIFIER()),
+      self.visit(ctx.x),
+      self.visit(ctx.y)
+    )
+
+  # Visit a parse tree produced by MyGrammarParser#matrix_defintion.
+  def visitMatrix_defintion(self, ctx:MyGrammarParser.Matrix_defintionContext):
+    return MatrixDefinitionNode(
+      self.visit(ctx.w),
+      self.visit(ctx.h)
+    )
+
+  # Visit a parse tree produced by MyGrammarParser#assign_matrix_field.
+  def visitAssign_matrix_field(self, ctx:MyGrammarParser.Assign_matrix_fieldContext):
+    return AssignMatrixExprNode(
+      str(ctx.IDENTIFIER()),
+      self.visit(ctx.x),
+      self.visit(ctx.y),
+      self.visit(ctx.value)
     )

@@ -9,6 +9,8 @@ class VariableTypes(Enum):
   BOOL = 3
   NAN = 4
   FUNCTION = 5
+  MATRIX = 6
+  STRING = 7
 
 
 class Variable:

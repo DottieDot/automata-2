@@ -34,6 +34,11 @@ class MyGrammarVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by MyGrammarParser#assign_matrix_field.
+    def visitAssign_matrix_field(self, ctx:MyGrammarParser.Assign_matrix_fieldContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by MyGrammarParser#anonymous_function_call.
     def visitAnonymous_function_call(self, ctx:MyGrammarParser.Anonymous_function_callContext):
         return self.visitChildren(ctx)
@@ -51,6 +56,16 @@ class MyGrammarVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MyGrammarParser#function_call.
     def visitFunction_call(self, ctx:MyGrammarParser.Function_callContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#matrix_defintion.
+    def visitMatrix_defintion(self, ctx:MyGrammarParser.Matrix_defintionContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#repeat_until.
+    def visitRepeat_until(self, ctx:MyGrammarParser.Repeat_untilContext):
         return self.visitChildren(ctx)
 
 
@@ -81,6 +96,11 @@ class MyGrammarVisitor(ParseTreeVisitor):
 
     # Visit a parse tree produced by MyGrammarParser#function_decl.
     def visitFunction_decl(self, ctx:MyGrammarParser.Function_declContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by MyGrammarParser#read_matrix_field.
+    def visitRead_matrix_field(self, ctx:MyGrammarParser.Read_matrix_fieldContext):
         return self.visitChildren(ctx)
 
 

@@ -17,3 +17,7 @@ from .FunctionExprNode import *
 from .AnonymousFunctionCallNode import *
 from .PrintExprNode import *
 from .WhileNode import *
+from .RepeatUntilNode import *
+from .AssignMatrixExprNode import *
+from .MatrixDefintionNode import *
+from .ReadMatrixExprNode import *

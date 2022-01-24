@@ -4,6 +4,7 @@ from antlr4 import CommonTokenStream, InputStream
 from antlr.MyGrammarLexer import MyGrammarLexer
 from antlr.MyGrammarParser import MyGrammarParser
 from MyVisitor import MyVisitor
+from lang.Variable import VariableTypes
 
 def run_code(code: str) -> Any:
   lexer = MyGrammarLexer(InputStream(code))
@@ -74,6 +75,43 @@ class MyTests(unittest.TestCase):
   def test_recursive_anonymous_function(self):
     result = run_code("fn(n){ if n > 0 { self(n - 1) * n } else { 1 } }(5)")
     self.assertEqual(120, result)
+
+  def test_repeat_until(self):
+    result = run_code("let a = 0; repeat { a = a + 1 } until a >= 10")
+    self.assertEqual(10, result)
+
+  def test_repeat_until_runs_once(self):
+    result = run_code("repeat { 5 } until true")
+    self.assertEqual(5, result)
+
+  def test_define_matrix(self):
+    result = run_code("matrix[2,2+2]")
+    self.assertEqual(2, result._width)
+    self.assertEqual(4, result._height)
+
+  def test_write_matrix(self):
+    result = run_code("let m = matrix[1,1]; m[0,0] = 20")
+    self.assertEqual(20, result)
+
+  def test_read_matrix(self):
+    result = run_code("let m = matrix[1,1]; m[0,0] = 20; m[0,0]")
+    self.assertEqual(20, result)
+
+  def test_complex_matrix(self):
+    result = run_code("let m = matrix[4,4]; let x = 0; while x < 4 { let y = 0; while y < 4 { m[x, y] = x * y; y = y + 1; }; x = x + 1; }; m")
+
+    raw = [[item.value for item in col] for col in result._matrix]
+
+    self.assertListEqual([
+      [0, 0, 0, 0],
+      [0, 1, 2, 3],
+      [0, 2, 4, 6],
+      [0, 3, 6, 9],
+    ], raw)
+
+  def test_matrix_in_expr(self):
+    result = run_code("let m = matrix[1,1]; m[0,0] = 10; 2 * m[0,0]")
+    self.assertEqual(20, result)
 
 if __name__ == '__main__':
   unittest.main()
