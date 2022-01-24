@@ -53,12 +53,93 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MyGrammarParser#assign_matrix_field.
-    def enterAssign_matrix_field(self, ctx:MyGrammarParser.Assign_matrix_fieldContext):
+    # Enter a parse tree produced by MyGrammarParser#read_dummy_matrix.
+    def enterRead_dummy_matrix(self, ctx:MyGrammarParser.Read_dummy_matrixContext):
         pass
 
-    # Exit a parse tree produced by MyGrammarParser#assign_matrix_field.
-    def exitAssign_matrix_field(self, ctx:MyGrammarParser.Assign_matrix_fieldContext):
+    # Exit a parse tree produced by MyGrammarParser#read_dummy_matrix.
+    def exitRead_dummy_matrix(self, ctx:MyGrammarParser.Read_dummy_matrixContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#read_dummy_matrix_field.
+    def enterRead_dummy_matrix_field(self, ctx:MyGrammarParser.Read_dummy_matrix_fieldContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#read_dummy_matrix_field.
+    def exitRead_dummy_matrix_field(self, ctx:MyGrammarParser.Read_dummy_matrix_fieldContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#write_dummy_matrix_field.
+    def enterWrite_dummy_matrix_field(self, ctx:MyGrammarParser.Write_dummy_matrix_fieldContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#write_dummy_matrix_field.
+    def exitWrite_dummy_matrix_field(self, ctx:MyGrammarParser.Write_dummy_matrix_fieldContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#define_dummy_matrix.
+    def enterDefine_dummy_matrix(self, ctx:MyGrammarParser.Define_dummy_matrixContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#define_dummy_matrix.
+    def exitDefine_dummy_matrix(self, ctx:MyGrammarParser.Define_dummy_matrixContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#transpose_dummy_matrix.
+    def enterTranspose_dummy_matrix(self, ctx:MyGrammarParser.Transpose_dummy_matrixContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#transpose_dummy_matrix.
+    def exitTranspose_dummy_matrix(self, ctx:MyGrammarParser.Transpose_dummy_matrixContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#inverse_dummy_matrix.
+    def enterInverse_dummy_matrix(self, ctx:MyGrammarParser.Inverse_dummy_matrixContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#inverse_dummy_matrix.
+    def exitInverse_dummy_matrix(self, ctx:MyGrammarParser.Inverse_dummy_matrixContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#mult_dummy_matrix.
+    def enterMult_dummy_matrix(self, ctx:MyGrammarParser.Mult_dummy_matrixContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#mult_dummy_matrix.
+    def exitMult_dummy_matrix(self, ctx:MyGrammarParser.Mult_dummy_matrixContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#dummy_scalar.
+    def enterDummy_scalar(self, ctx:MyGrammarParser.Dummy_scalarContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#dummy_scalar.
+    def exitDummy_scalar(self, ctx:MyGrammarParser.Dummy_scalarContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#dummy_matrix_parenthesis.
+    def enterDummy_matrix_parenthesis(self, ctx:MyGrammarParser.Dummy_matrix_parenthesisContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#dummy_matrix_parenthesis.
+    def exitDummy_matrix_parenthesis(self, ctx:MyGrammarParser.Dummy_matrix_parenthesisContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#add_dummy_matrix.
+    def enterAdd_dummy_matrix(self, ctx:MyGrammarParser.Add_dummy_matrixContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#add_dummy_matrix.
+    def exitAdd_dummy_matrix(self, ctx:MyGrammarParser.Add_dummy_matrixContext):
         pass
 
 
@@ -71,24 +152,6 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MyGrammarParser#parentheses.
-    def enterParentheses(self, ctx:MyGrammarParser.ParenthesesContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#parentheses.
-    def exitParentheses(self, ctx:MyGrammarParser.ParenthesesContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#comparison.
-    def enterComparison(self, ctx:MyGrammarParser.ComparisonContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#comparison.
-    def exitComparison(self, ctx:MyGrammarParser.ComparisonContext):
-        pass
-
-
     # Enter a parse tree produced by MyGrammarParser#function_call.
     def enterFunction_call(self, ctx:MyGrammarParser.Function_callContext):
         pass
@@ -98,30 +161,12 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MyGrammarParser#matrix_defintion.
-    def enterMatrix_defintion(self, ctx:MyGrammarParser.Matrix_defintionContext):
+    # Enter a parse tree produced by MyGrammarParser#matrix_block.
+    def enterMatrix_block(self, ctx:MyGrammarParser.Matrix_blockContext):
         pass
 
-    # Exit a parse tree produced by MyGrammarParser#matrix_defintion.
-    def exitMatrix_defintion(self, ctx:MyGrammarParser.Matrix_defintionContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#repeat_until.
-    def enterRepeat_until(self, ctx:MyGrammarParser.Repeat_untilContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#repeat_until.
-    def exitRepeat_until(self, ctx:MyGrammarParser.Repeat_untilContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#multiply_divide.
-    def enterMultiply_divide(self, ctx:MyGrammarParser.Multiply_divideContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#multiply_divide.
-    def exitMultiply_divide(self, ctx:MyGrammarParser.Multiply_divideContext):
+    # Exit a parse tree produced by MyGrammarParser#matrix_block.
+    def exitMatrix_block(self, ctx:MyGrammarParser.Matrix_blockContext):
         pass
 
 
@@ -131,24 +176,6 @@ class MyGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by MyGrammarParser#bool_literal.
     def exitBool_literal(self, ctx:MyGrammarParser.Bool_literalContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#define_variable.
-    def enterDefine_variable(self, ctx:MyGrammarParser.Define_variableContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#define_variable.
-    def exitDefine_variable(self, ctx:MyGrammarParser.Define_variableContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#if_expr.
-    def enterIf_expr(self, ctx:MyGrammarParser.If_exprContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#if_expr.
-    def exitIf_expr(self, ctx:MyGrammarParser.If_exprContext):
         pass
 
 
@@ -188,15 +215,6 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MyGrammarParser#print_statement.
-    def enterPrint_statement(self, ctx:MyGrammarParser.Print_statementContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#print_statement.
-    def exitPrint_statement(self, ctx:MyGrammarParser.Print_statementContext):
-        pass
-
-
     # Enter a parse tree produced by MyGrammarParser#conjunction.
     def enterConjunction(self, ctx:MyGrammarParser.ConjunctionContext):
         pass
@@ -212,6 +230,114 @@ class MyGrammarListener(ParseTreeListener):
 
     # Exit a parse tree produced by MyGrammarParser#none_literal.
     def exitNone_literal(self, ctx:MyGrammarParser.None_literalContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#float_literal.
+    def enterFloat_literal(self, ctx:MyGrammarParser.Float_literalContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#float_literal.
+    def exitFloat_literal(self, ctx:MyGrammarParser.Float_literalContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#while_statement.
+    def enterWhile_statement(self, ctx:MyGrammarParser.While_statementContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#while_statement.
+    def exitWhile_statement(self, ctx:MyGrammarParser.While_statementContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#add_subtract.
+    def enterAdd_subtract(self, ctx:MyGrammarParser.Add_subtractContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#add_subtract.
+    def exitAdd_subtract(self, ctx:MyGrammarParser.Add_subtractContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#assign_matrix_field.
+    def enterAssign_matrix_field(self, ctx:MyGrammarParser.Assign_matrix_fieldContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#assign_matrix_field.
+    def exitAssign_matrix_field(self, ctx:MyGrammarParser.Assign_matrix_fieldContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#parentheses.
+    def enterParentheses(self, ctx:MyGrammarParser.ParenthesesContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#parentheses.
+    def exitParentheses(self, ctx:MyGrammarParser.ParenthesesContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#comparison.
+    def enterComparison(self, ctx:MyGrammarParser.ComparisonContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#comparison.
+    def exitComparison(self, ctx:MyGrammarParser.ComparisonContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#matrix_defintion.
+    def enterMatrix_defintion(self, ctx:MyGrammarParser.Matrix_defintionContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#matrix_defintion.
+    def exitMatrix_defintion(self, ctx:MyGrammarParser.Matrix_defintionContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#repeat_until.
+    def enterRepeat_until(self, ctx:MyGrammarParser.Repeat_untilContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#repeat_until.
+    def exitRepeat_until(self, ctx:MyGrammarParser.Repeat_untilContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#multiply_divide.
+    def enterMultiply_divide(self, ctx:MyGrammarParser.Multiply_divideContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#multiply_divide.
+    def exitMultiply_divide(self, ctx:MyGrammarParser.Multiply_divideContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#define_variable.
+    def enterDefine_variable(self, ctx:MyGrammarParser.Define_variableContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#define_variable.
+    def exitDefine_variable(self, ctx:MyGrammarParser.Define_variableContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#if_expr.
+    def enterIf_expr(self, ctx:MyGrammarParser.If_exprContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#if_expr.
+    def exitIf_expr(self, ctx:MyGrammarParser.If_exprContext):
+        pass
+
+
+    # Enter a parse tree produced by MyGrammarParser#print_statement.
+    def enterPrint_statement(self, ctx:MyGrammarParser.Print_statementContext):
+        pass
+
+    # Exit a parse tree produced by MyGrammarParser#print_statement.
+    def exitPrint_statement(self, ctx:MyGrammarParser.Print_statementContext):
         pass
 
 
@@ -233,39 +359,12 @@ class MyGrammarListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by MyGrammarParser#float_literal.
-    def enterFloat_literal(self, ctx:MyGrammarParser.Float_literalContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#float_literal.
-    def exitFloat_literal(self, ctx:MyGrammarParser.Float_literalContext):
-        pass
-
-
     # Enter a parse tree produced by MyGrammarParser#nan_literal.
     def enterNan_literal(self, ctx:MyGrammarParser.Nan_literalContext):
         pass
 
     # Exit a parse tree produced by MyGrammarParser#nan_literal.
     def exitNan_literal(self, ctx:MyGrammarParser.Nan_literalContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#while_statement.
-    def enterWhile_statement(self, ctx:MyGrammarParser.While_statementContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#while_statement.
-    def exitWhile_statement(self, ctx:MyGrammarParser.While_statementContext):
-        pass
-
-
-    # Enter a parse tree produced by MyGrammarParser#add_subtract.
-    def enterAdd_subtract(self, ctx:MyGrammarParser.Add_subtractContext):
-        pass
-
-    # Exit a parse tree produced by MyGrammarParser#add_subtract.
-    def exitAdd_subtract(self, ctx:MyGrammarParser.Add_subtractContext):
         pass
 
 

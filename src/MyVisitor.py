@@ -1,5 +1,6 @@
 from antlr.MyGrammarParser import MyGrammarParser
 from antlr.MyGrammarVisitor import MyGrammarVisitor
+import lang.dummy_matrix as matrix
 from lang import *
 
 class MyVisitor(MyGrammarVisitor):
@@ -210,7 +211,7 @@ class MyVisitor(MyGrammarVisitor):
   # Visit a parse tree produced by MyGrammarParser#read_matrix_field.
   def visitRead_matrix_field(self, ctx:MyGrammarParser.Read_matrix_fieldContext):
     return ReadmatrixExprNode(
-      str(ctx.IDENTIFIER()),
+      self.visit(ctx.matrix),
       self.visit(ctx.x),
       self.visit(ctx.y)
     )
@@ -230,3 +231,56 @@ class MyVisitor(MyGrammarVisitor):
       self.visit(ctx.y),
       self.visit(ctx.value)
     )
+
+  # Visit a parse tree produced by MyGrammarParser#read_dummy_matrix.
+  def visitRead_dummy_matrix(self, ctx:MyGrammarParser.Read_dummy_matrixContext):
+    return matrix.Identifier(str(ctx.IDENTIFIER()))
+
+
+  # Visit a parse tree produced by MyGrammarParser#read_dummy_matrix_field.
+  def visitRead_dummy_matrix_field(self, ctx:MyGrammarParser.Read_dummy_matrix_fieldContext):
+    return matrix.ReadMatrixField(int(ctx.x.text), int(ctx.y.text), self.visit(ctx.matrix_expr()))
+
+
+  # Visit a parse tree produced by MyGrammarParser#write_dummy_matrix_field.
+  def visitWrite_dummy_matrix_field(self, ctx:MyGrammarParser.Write_dummy_matrix_fieldContext):
+    return matrix.WriteMatrixField(int(ctx.x.text), int(ctx.y.text), str(ctx.IDENTIFIER()), int(ctx.v.text))
+
+
+  # Visit a parse tree produced by MyGrammarParser#define_dummy_matrix.
+  def visitDefine_dummy_matrix(self, ctx:MyGrammarParser.Define_dummy_matrixContext):
+    return matrix.DefineMatrix(str(ctx.IDENTIFIER()), int(ctx.w.text), int(ctx.h.text))
+
+
+  # Visit a parse tree produced by MyGrammarParser#dummy_matrix_parenthesis.
+  def visitDummy_matrix_parenthesis(self, ctx:MyGrammarParser.Dummy_matrix_parenthesisContext):
+    return self.visit(ctx.matrix_expr())
+
+
+  # Visit a parse tree produced by MyGrammarParser#transpose_dummy_matrix.
+  def visitTranspose_dummy_matrix(self, ctx:MyGrammarParser.Transpose_dummy_matrixContext):
+    return matrix.TransposeMatrix(self.visit(ctx.matrix_expr()))
+
+
+  # Visit a parse tree produced by MyGrammarParser#inverse_dummy_matrix.
+  def visitInverse_dummy_matrix(self, ctx:MyGrammarParser.Inverse_dummy_matrixContext):
+    return matrix.InverseMatrix(self.visit(ctx.matrix_expr()))
+
+
+  # Visit a parse tree produced by MyGrammarParser#mult_dummy_matrix.
+  def visitMult_dummy_matrix(self, ctx:MyGrammarParser.Mult_dummy_matrixContext):
+    return matrix.MultiplyMatrix(self.visit(ctx.lhs), self.visit(ctx.rhs))
+
+
+  # Visit a parse tree produced by MyGrammarParser#dummy_scalar.
+  def visitDummy_scalar(self, ctx:MyGrammarParser.Dummy_scalarContext):
+    return matrix.Scalar(int(str(ctx.INTEGER())))
+
+
+  # Visit a parse tree produced by MyGrammarParser#add_dummy_matrix.
+  def visitAdd_dummy_matrix(self, ctx:MyGrammarParser.Add_dummy_matrixContext):
+    return matrix.AddMatrix(self.visit(ctx.lhs), self.visit(ctx.rhs))
+
+  # Visit a parse tree produced by MyGrammarParser#matrix_block.
+  def visitMatrix_block(self, ctx:MyGrammarParser.Matrix_blockContext):
+    return MatrixBlock(self.visit(ctx.matrix_expr()))

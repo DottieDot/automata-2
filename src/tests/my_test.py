@@ -113,5 +113,41 @@ class MyTests(unittest.TestCase):
     result = run_code("let m = matrix[1,1]; m[0,0] = 10; 2 * m[0,0]")
     self.assertEqual(20, result)
 
+  def test_assign_dummy_matrix_field(self):
+    result = run_code("matrix myMatrixA[1,2] = 73")
+    self.assertEqual("set position (1, 2) of myMatrixA to 73", result)
+
+  def test_read_dummy_matrix_field(self):
+    result = run_code("matrix myMatrix1[3,4]")
+    self.assertEqual("retrieve position (3, 4) of (matrix myMatrix1)", result)
+
+  def test_define_dummy_matrix(self):
+    result = run_code("matrix let myMatrix3 = matrix[1,4]")
+    self.assertEqual("a matrix of 1x4 named myMatrix3", result)
+
+  def test_inverse_dummy_matrix(self):
+    result = run_code("matrix myMatrix^-1")
+    self.assertEqual("inverse matrix of (matrix myMatrix)", result)
+
+  def test_transpose_matrix(self):
+    result = run_code("matrix myMatrix^T")
+    self.assertEqual("transpose matrix of (matrix myMatrix)", result)
+
+  def test_sum_dummy_matrices(self):
+    result = run_code("matrix myMatrix1 + myMatrix2")
+    self.assertEqual("the sum of (matrix myMatrix1) and (matrix myMatrix2)", result)
+
+  def test_multiply_dummy_matrices(self):
+    result = run_code("matrix myMatrix1 * myMatrix2")
+    self.assertEqual("the result of multiplying (matrix myMatrix1) with (matrix myMatrix2)", result)
+  
+  def test_scale_dummy_matrix(self):
+    result = run_code("matrix 2 * myMatrix2")
+    self.assertEqual("the result of multiplying (scalar 2) with (matrix myMatrix2)", result)
+
+  def test_scale_and_multiply_dummy_matrices(self):
+    result = run_code("matrix 2 * (myMatrix2 * myMatrix3)")
+    self.assertEqual("the result of multiplying (scalar 2) with (the result of multiplying (matrix myMatrix2) with (matrix myMatrix3))", result)
+
 if __name__ == '__main__':
   unittest.main()

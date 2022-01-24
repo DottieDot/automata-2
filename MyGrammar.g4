@@ -11,22 +11,22 @@ if_statement: IF expr OPEN_BLOCK scoped_expr CLOSE_BLOCK;
 else_if_statement: ELSE IF expr OPEN_BLOCK scoped_expr CLOSE_BLOCK;
 else_statement: ELSE OPEN_BLOCK scoped_expr CLOSE_BLOCK;
 
-matrix_statements: (matrix_expr EOS)*;
-
 matrix_expr
-  : IDENTIFIER                                                # read_dummy_matrix
-  | matrix_expr '^-1'                                         # inverse_dummy_matrix
-  | matrix_expr '^T'                                          # transpose_dummy_matrix
-  | lhs=matrix_expr OP_PLUS rhs=matrix_expr                   # add_dummy_matrix
-  | lhs=matrix_expr OP_MULT rhs=matrix_expr                   # mult_dummy_matrix
-  | ((lhs=INTEGER OP_MULT rhs=matrix_expr) | (lhs=IDENTIFIER matrix_expr rhs=INTEGER)) # mult_dummy_matrix_int
-  | IDENTIFIER LBR x=INTEGER COMMA y=INTEGER RBR              # read_dummy_matrix_field
-  | LET IDENTIFIER = MATRIX LBR w=INTEGER COMMA h=INTEGER RBR # define_dummy_matrix
+  : IDENTIFIER                                                        # read_dummy_matrix
+  | INTEGER                                                           # dummy_scalar
+  | LPAR matrix_expr RPAR                                             # dummy_matrix_parenthesis
+  | matrix_expr '^-1'                                                 # inverse_dummy_matrix
+  | matrix_expr '^T'                                                  # transpose_dummy_matrix
+  | lhs=matrix_expr OP_PLUS rhs=matrix_expr                           # add_dummy_matrix
+  | lhs=matrix_expr OP_MULT rhs=matrix_expr                           # mult_dummy_matrix
+  | matrix_expr LBR x=INTEGER COMMA y=INTEGER RBR                     # read_dummy_matrix_field
+  | IDENTIFIER LBR x=INTEGER COMMA y=INTEGER RBR OP_ASSIGN v=INTEGER  # write_dummy_matrix_field
+  | LET IDENTIFIER OP_ASSIGN MATRIX LBR w=INTEGER COMMA h=INTEGER RBR # define_dummy_matrix
   ;
 
 expr
   // Put dummy matrix stuff in a seperate block to avoid breaking the grammar
-  : MATRIX OPEN_BLOCK matrix_statements CLOSE_BLOCK # matrix_block
+  : MATRIX matrix_expr # matrix_block
 
   | INTEGER                                         # int_literal
   | FLOAT                                           # float_literal
@@ -36,6 +36,7 @@ expr
   | LPAR expr RPAR                                  # parentheses
   | MATRIX LBR w=expr COMMA h=expr RBR              # matrix_defintion
   | NOT expr                                        # not
+  | matrix=expr LBR x=expr COMMA y=expr RBR         # read_matrix_field
   | fn_expr=expr LPAR (expr(COMMA expr)*)? RPAR     # anonymous_function_call
   | left=expr op=(OP_DIV|OP_MULT)       right=expr  # multiply_divide
   | left=expr op=(OP_PLUS|OP_MINUS)     right=expr  # add_subtract
@@ -51,7 +52,6 @@ expr
   | ident=IDENTIFIER LPAR (expr(COMMA expr)*)? RPAR # function_call
   | PRINT expr                                      # print_statement
   | IDENTIFIER                                      # read_variable
-  | IDENTIFIER LBR x=expr COMMA y=expr RBR    # read_matrix_field
   ;
 
 AND: '&&';

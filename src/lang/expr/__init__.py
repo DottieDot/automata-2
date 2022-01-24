@@ -21,3 +21,4 @@ from .RepeatUntilNode import *
 from .AssignMatrixExprNode import *
 from .MatrixDefintionNode import *
 from .ReadMatrixExprNode import *
+from .MatrixBlock import *
