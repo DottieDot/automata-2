@@ -77,7 +77,7 @@ class MyTests(unittest.TestCase):
     self.assertEqual(120, result)
 
   def test_repeat_until(self):
-    result = run_code("let a = 0; repeat { a = a + 1 } until a >= 10")
+    result = run_code("let a = 0; let b = 9; repeat { a = a + 1 } until a > b")
     self.assertEqual(10, result)
 
   def test_repeat_until_runs_once(self):
@@ -112,6 +112,10 @@ class MyTests(unittest.TestCase):
   def test_matrix_in_expr(self):
     result = run_code("let m = matrix[1,1]; m[0,0] = 10; 2 * m[0,0]")
     self.assertEqual(20, result)
+
+  def test_matrix_returned_from_function(self):
+    result = run_code("fn get_matrix() { let m = matrix[1,2]; m[0,1] = 10; m }; get_matrix()[0,1]")
+    self.assertEqual(10, result)
 
   def test_assign_dummy_matrix_field(self):
     result = run_code("matrix myMatrixA[1,2] = 73")
